@@ -3,14 +3,23 @@
 import Image from "next/image";
 import { motion, AnimatePresence } from 'motion/react'
 import { FileCode, Mail, MailOpen } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import ThemeToggle from "./theme-toggle";
 import { RotateWords } from "./rotate-words";
+import { Marquee } from "./marquee";
 
 export default function HeroWithScale() {
     const { resolvedTheme } = useTheme();
-    const isDark = resolvedTheme === "dark";
+    const [mounted, setMounted] = useState(false);
+
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const isDark = mounted && resolvedTheme === "dark";
+    const [isLogoHovered, setIsLogoHovered] = useState(false);
 
     return (
         <section className="relative h-screen w-full overflow-hidden border-b border-border">
@@ -49,15 +58,19 @@ export default function HeroWithScale() {
                 <main className="flex-1 min-w-0">
                     {/* Dot Pattern Section (The "Canvas") */}
                     <section className="bg-dot w-full h-48 md:h-80 border-b border-border flex items-center justify-center p-8">
-                        <Image
-                            src={isDark ? "/LightLogo.png" : "/Logo.png"}
-                            alt="Logo"
-                            width={320}
-                            height={320}
-                            
-                            priority
-                            className="w-40 md:w-80 h-auto drop-shadow-sm transition-all"
-                        />
+                        <div 
+                            className="relative w-fit h-fit group"
+                        >
+                            <Image
+                                src={isDark ? "/LightLogo.png" : "/Logo.png"}
+                                alt="Logo"
+                                width={320}
+                                height={320}
+                                priority
+                                className="w-40 md:w-80 h-auto drop-shadow-sm transition-all"
+                            />
+
+                        </div>
                     </section>
 
                     {/* Integrated Bio Grid Section */}
@@ -86,17 +99,33 @@ export default function HeroWithScale() {
                                 <div className="text-[10px] md:text-base font-mono text-muted-foreground mt-1 md:mt-2">
                                     <RotateWords words={["Product-Focused Engineer", "Frontend Developer", "Open Source Contributor", "Product Designer", "Creative Technologist"]} />
                                 </div>
+                                <div className="mt-5">
+                                    <p>Currently building Inertia-UI</p>
+                                </div>
                             </div>
                         </div>
 
                         {/* Row 2: Social Connectivity Row */}
-                        <div className="w-full p-4 md:px-8 md:py-6 flex flex-wrap items-center gap-3 md:gap-5 bg-dot/[0.05]">
+                        {/* <div className="w-full p-4 md:px-8 md:py-6 flex flex-wrap items-center gap-3 md:gap-5 bg-dot/[0.05]">
                             <SocialIcon src="/Github.jpg" alt="Github" />
                             <SocialIcon src="/LinkedIn.png" alt="LinkedIn" />
                             <SocialIcon src="/X.jpg" alt="X" />
                             <MailButton email="yash.anand167@gmail.com" />
+                        </div> */}
+                    </section>
+
+                    <section className="relative w-full border-b border-border overflow-hidden">
+                        <div className="h-12 md:h-14 bg-stripe border-b border-border " />
+                        <div className="p-4 md:px-8 md:py-6">
+                            <h2 className="text-xl md:text-2xl font-medium tracking-tight">Stacks I am familiar with</h2>
+                        </div>
+                        
+                        <div className="py-5 space-y-2">
+                            <Marquee items={techStack1} direction="left" speed={40} />
+                            <Marquee items={techStack2} direction="right" speed={35} />
                         </div>
                     </section>
+
                 </main>
 
                 <VerticalStripes />
@@ -104,6 +133,30 @@ export default function HeroWithScale() {
         </section>
     );
 }
+
+const techStack1 = [
+    { name: "React" },
+    { name: "Next.js" },
+    { name: "TypeScript" },
+    { name: "Node.js" },
+    { name: "Tailwind CSS" },
+    { name: "Framer Motion" },
+    { name: "PostgreSQL" },
+    { name: "Redis" },
+    { name: "Bun" },
+];
+
+const techStack2 = [
+    { name: "Python" },
+    { name: "Go" },
+    { name: "Rust" },
+    { name: "Docker" },
+    { name: "AWS" },
+    { name: "Figma" },
+    { name: "Three.js" },
+    { name: "GraphQL" },
+    { name: "Supabase" },
+];
 
 const SocialIcon = ({ src, alt }: { src: string; alt: string }) => (
     <div className="w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl border border-border overflow-hidden bg-background shadow-sm hover:border-primary/50 transition-all cursor-pointer shrink-0 relative group active:scale-95">
