@@ -8,24 +8,17 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 
 export default function Header() {
-    const { resolvedTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
-
     const [scrolling, setIsScrolling] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolling(window.scrollY > 10);
         };
+        handleScroll(); 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const isDark = mounted && resolvedTheme === "dark";
     return (
         <header className="sticky top-0 z-50 w-full h-14 border-b border-border bg-background/80 backdrop-blur-md">
             <div className="max-w-5xl mx-auto w-full h-full relative flex">
@@ -42,29 +35,37 @@ export default function Header() {
                                     initial={{ opacity: 0, scale: 0.8, y: 10 }}
                                     animate={{ opacity: 1, scale: 1, y: 0 }}
                                     exit={{ opacity: 0, scale: 0.8, y: 10 }}
-                                    transition={{ 
-                                        type: "spring", 
-                                        stiffness: 260, 
+                                    transition={{
+                                        type: "spring",
+                                        stiffness: 260,
                                         damping: 20,
                                         mass: 0.5
                                     }}
                                     className="flex items-center"
                                 >
-                                    <Image
-                                        src={isDark ? "/LightLogo.png" : "/Logo.png"}
-                                        alt="Logo"
-                                        width={40}
-                                        height={40}
-                                        priority
-                                        className="w-8 md:w-8 h-auto drop-shadow-sm transition-all"
-                                    />
+                                    <div className="relative w-8 md:w-8 h-8 md:h-8">
+                                        <Image
+                                            src="/Logo.png"
+                                            alt="Logo"
+                                            fill
+                                            priority
+                                            className="object-contain drop-shadow-sm transition-all dark:hidden"
+                                        />
+                                        <Image
+                                            src="/LightLogo.png"
+                                            alt="Logo"
+                                            fill
+                                            priority
+                                            className="object-contain drop-shadow-sm transition-all hidden dark:block"
+                                        />
+                                    </div>
                                 </motion.a>
                             )}
                         </AnimatePresence>
-                        <a href="#blogs" className="text-xs md:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                        <a href="/blogs" className="text-xs md:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                             Blogs
                         </a>
-                        <a href="#personal" className="text-xs md:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                        <a href="/personal" className="text-xs md:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                             Personal
                         </a>
                     </nav>

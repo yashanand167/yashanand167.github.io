@@ -11,15 +11,6 @@ import { Marquee } from "./marquee";
 import Header from "./Header";
 
 export default function HeroWithScale() {
-    const { resolvedTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
-
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    const isDark = mounted && resolvedTheme === "dark";
 
     return (
         <div className="w-full flex flex-col min-h-screen">
@@ -34,14 +25,22 @@ export default function HeroWithScale() {
                             <div
                                 className="relative w-fit h-fit group"
                             >
-                                <Image
-                                    src={isDark ? "/LightLogo.png" : "/Logo.png"}
-                                    alt="Logo"
-                                    width={300}
-                                    height={300}
-                                    priority
-                                    className="w-40 md:w-80 h-auto drop-shadow-sm transition-all"
-                                />
+                                <div className="relative w-40 md:w-80 aspect-square">
+                                    <Image
+                                        src="/Logo.png"
+                                        alt="Logo"
+                                        fill
+                                        priority
+                                        className="object-contain drop-shadow-sm transition-all dark:hidden"
+                                    />
+                                    <Image
+                                        src="/LightLogo.png"
+                                        alt="Logo"
+                                        fill
+                                        priority
+                                        className="object-contain drop-shadow-sm transition-all hidden dark:block"
+                                    />
+                                </div>
 
                             </div>
                         </section>
@@ -72,9 +71,9 @@ export default function HeroWithScale() {
                                     <div className="text-[10px] md:text-base font-mono text-muted-foreground mt-1 md:mt-2">
                                         <RotateWords words={["Product-Focused Engineer", "Frontend Developer", "Open Source Contributor", "Product Designer", "Creative Technologist"]} />
                                     </div>
-                                    
+
                                 </div>
-                                
+
                             </div>
                             <section className="border-t border-border p-4 md:p-8">
                                 <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-4">
@@ -86,7 +85,7 @@ export default function HeroWithScale() {
                                         I specialize in building high-performance web interfaces and contributing to open-source
                                         projects that empower developers to create beautiful digital experiences.
                                     </p>
-                                    
+
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {[
                                             { title: "Product-First Thinking", desc: "Crafting interfaces that balance business goals with user delight." },
@@ -116,7 +115,7 @@ export default function HeroWithScale() {
                         </section>
 
                         <section className="relative w-full border-b border-border overflow-hidden">
-                            <div className="h-12 md:h-14 bg-stripe border-b border-border " />
+                            <div className="h-12 md:h-12 bg-stripe border-b border-border " />
                             <div className="p-4 md:px-8 md:py-6">
                                 <h2 className="text-xl md:text-2xl font-medium tracking-tight">Stacks I am familiar with</h2>
                             </div>
@@ -137,10 +136,14 @@ export default function HeroWithScale() {
                             </div>
                         </section>
 
-                        <section>
-                            <div>
-                                <h1>People who worked with me</h1>
+                        <section className="relative w-full border-b border-border overflow-hidden">
+                            <div className="h-12 md:h-12 bg-stripe border-b border-border " />
+                            <div className="p-4 md:px-8 md:py-6">
+                                <h1 className="text-xl md:text-2xl font-medium tracking-tight">People who worked with me</h1>
                             </div>
+                            <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                
+                            </section>
                         </section>
 
                     </main>
