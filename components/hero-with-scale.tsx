@@ -8,6 +8,7 @@ import { useTheme } from "next-themes";
 import ThemeToggle from "./theme-toggle";
 import { RotateWords } from "./rotate-words";
 import { Marquee } from "./marquee";
+import Header from "./Header";
 
 export default function HeroWithScale() {
     const { resolvedTheme } = useTheme();
@@ -19,118 +20,135 @@ export default function HeroWithScale() {
     }, []);
 
     const isDark = mounted && resolvedTheme === "dark";
-    const [isLogoHovered, setIsLogoHovered] = useState(false);
 
     return (
-        <section className="relative h-screen w-full overflow-hidden border-b border-border">
-            {/* Full-width Top Bar with Horizontal Lines */}
-            <div className="w-full h-14 border-b border-border relative">
-                <div className="max-w-5xl mx-auto w-full h-full relative flex">
-                    {/* Left Crossing Box */}
-                    <div className="w-14 bg-background bg-stripe border-l border-r border-border h-full shrink-0" />
+        <div className="w-full flex flex-col min-h-screen">
+            <section className="relative w-full border-b border-border flex-1 flex flex-col">
+                {/* Main Content Area with Vertical Stripes */}
+                <div className="max-w-5xl mx-auto w-full flex flex-1 items-stretch">
+                    <VerticalStripes />
 
-                    <div className="flex flex-1 items-center justify-between px-4 ">
-                        <nav className="flex items-center gap-4 md:gap-8">
-                            <a href="#about" className="text-xs md:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                                About
-                            </a>
-                            <a href="#blogs" className="text-xs md:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                                Blogs
-                            </a>
-                        </nav>
+                    <main className="flex-1 min-w-0">
+                        {/* Dot Pattern Section (The "Canvas") */}
+                        <section className="bg-dot w-full h-48 md:h-60 border-b border-border flex items-center justify-center p-8">
+                            <div
+                                className="relative w-fit h-fit group"
+                            >
+                                <Image
+                                    src={isDark ? "/LightLogo.png" : "/Logo.png"}
+                                    alt="Logo"
+                                    width={300}
+                                    height={300}
+                                    priority
+                                    className="w-40 md:w-80 h-auto drop-shadow-sm transition-all"
+                                />
 
-                        <div className="flex items-center gap-2">
-                            <ResumeButton />
-                            <div className="h-4 w-[1px] bg-border mx-1 md:mx-2" />
-                            <ThemeToggle />
-                        </div>
-                    </div>
-
-                    {/* Right Crossing Box */}
-                    <div className="w-14 bg-background bg-stripe border-l border-r border-border h-full shrink-0" />
-                </div>
-            </div>
-
-            {/* Main Content Area with Vertical Stripes */}
-            <div className="max-w-5xl mx-auto w-full h-full flex">
-                <VerticalStripes />
-
-                <main className="flex-1 min-w-0">
-                    {/* Dot Pattern Section (The "Canvas") */}
-                    <section className="bg-dot w-full h-48 md:h-80 border-b border-border flex items-center justify-center p-8">
-                        <div 
-                            className="relative w-fit h-fit group"
-                        >
-                            <Image
-                                src={isDark ? "/LightLogo.png" : "/Logo.png"}
-                                alt="Logo"
-                                width={320}
-                                height={320}
-                                priority
-                                className="w-40 md:w-80 h-auto drop-shadow-sm transition-all"
-                            />
-
-                        </div>
-                    </section>
-
-                    {/* Integrated Bio Grid Section */}
-                    <section className="w-full flex flex-col border-b border-border">
-                        {/* Row 1: Profile & Name */}
-                        <div className="flex flex-row items-stretch border-b border-border">
-                            {/* Profile Image Cell */}
-                            <div className="p-4 md:p-8 flex items-center justify-center border-r border-border shrink-0 bg-muted/5">
-                                <div className="w-16 h-16 md:w-32 md:h-32 rounded-full border border-border overflow-hidden shadow-sm bg-background">
-                                    <Image
-                                        src="/Image.jpg"
-                                        alt="Yash Anand"
-                                        width={128}
-                                        height={128}
-                                        priority
-                                        className="object-cover w-full h-full"
-                                    />
-                                </div>
                             </div>
+                        </section>
 
-                            {/* Name and Animated Title Cell */}
-                            <div className="flex-1 flex flex-col justify-center p-4 md:p-8 bg-stripe-horizontal/[0.02]">
-                                <h1 className="text-xl md:text-4xl font-medium tracking-tight text-foreground">
-                                    Yash Anand
-                                </h1>
-                                <div className="text-[10px] md:text-base font-mono text-muted-foreground mt-1 md:mt-2">
-                                    <RotateWords words={["Product-Focused Engineer", "Frontend Developer", "Open Source Contributor", "Product Designer", "Creative Technologist"]} />
+                        {/* Integrated Bio Grid Section */}
+                        <section className="w-full flex flex-col border-b border-border">
+                            {/* Row 1: Profile & Name */}
+                            <div className="flex flex-row items-stretch border-b border-border">
+                                {/* Profile Image Cell */}
+                                <div className="p-4 md:p-8 flex items-center justify-center border-r border-border shrink-0 bg-muted/5">
+                                    <div className="w-16 h-16 md:w-32 md:h-32 rounded-full border border-border overflow-hidden shadow-sm bg-background">
+                                        <Image
+                                            src="/Image.jpg"
+                                            alt="Yash Anand"
+                                            width={128}
+                                            height={128}
+                                            priority
+                                            className="object-cover w-full h-full"
+                                        />
+                                    </div>
                                 </div>
-                                <div className="mt-5">
-                                    <p>Currently building Inertia-UI</p>
+
+                                {/* Name and Animated Title Cell */}
+                                <div className="flex-1 flex flex-col justify-center p-4 md:p-8 bg-stripe-horizontal/[0.02]">
+                                    <h1 className="text-xl md:text-4xl font-medium tracking-tight text-foreground">
+                                        Yash Anand
+                                    </h1>
+                                    <div className="text-[10px] md:text-base font-mono text-muted-foreground mt-1 md:mt-2">
+                                        <RotateWords words={["Product-Focused Engineer", "Frontend Developer", "Open Source Contributor", "Product Designer", "Creative Technologist"]} />
+                                    </div>
+                                    
                                 </div>
+                                
                             </div>
-                        </div>
+                            <section className="border-t border-border p-4 md:p-8">
+                                <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-4">
+                                    About
+                                </h2>
+                                <div className="space-y-6">
+                                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl">
+                                        I'm a product-focused engineer dedicated to bridging the gap between design and code.
+                                        I specialize in building high-performance web interfaces and contributing to open-source
+                                        projects that empower developers to create beautiful digital experiences.
+                                    </p>
+                                    
+                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        {[
+                                            { title: "Product-First Thinking", desc: "Crafting interfaces that balance business goals with user delight." },
+                                            { title: "Modern Tech Stack", desc: "Next.js, TypeScript, and Framer Motion for fluid experiences." },
+                                            { title: "Open Source", desc: "Contributing to the ecosystem through tools like Inertia-UI." },
+                                            { title: "Design Systems", desc: "Building scalable, maintainable component libraries from scratch." }
+                                        ].map((item, idx) => (
+                                            <li key={idx} className="flex gap-3">
+                                                <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                                                <div className="space-y-1">
+                                                    <p className="text-sm font-medium text-foreground leading-none">{item.title}</p>
+                                                    <p className="text-xs md:text-sm text-muted-foreground leading-tight">{item.desc}</p>
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </section>
 
-                        {/* Row 2: Social Connectivity Row */}
-                        {/* <div className="w-full p-4 md:px-8 md:py-6 flex flex-wrap items-center gap-3 md:gap-5 bg-dot/[0.05]">
+                            {/* Row 2: Social Connectivity Row */}
+                            {/* <div className="w-full p-4 md:px-8 md:py-6 flex flex-wrap items-center gap-3 md:gap-5 bg-dot/[0.05]">
                             <SocialIcon src="/Github.jpg" alt="Github" />
                             <SocialIcon src="/LinkedIn.png" alt="LinkedIn" />
                             <SocialIcon src="/X.jpg" alt="X" />
                             <MailButton email="yash.anand167@gmail.com" />
                         </div> */}
-                    </section>
+                        </section>
 
-                    <section className="relative w-full border-b border-border overflow-hidden">
-                        <div className="h-12 md:h-14 bg-stripe border-b border-border " />
-                        <div className="p-4 md:px-8 md:py-6">
-                            <h2 className="text-xl md:text-2xl font-medium tracking-tight">Stacks I am familiar with</h2>
-                        </div>
-                        
-                        <div className="py-5 space-y-2">
-                            <Marquee items={techStack1} direction="left" speed={40} />
-                            <Marquee items={techStack2} direction="right" speed={35} />
-                        </div>
-                    </section>
+                        <section className="relative w-full border-b border-border overflow-hidden">
+                            <div className="h-12 md:h-14 bg-stripe border-b border-border " />
+                            <div className="p-4 md:px-8 md:py-6">
+                                <h2 className="text-xl md:text-2xl font-medium tracking-tight">Stacks I am familiar with</h2>
+                            </div>
 
-                </main>
+                            <div className="py-3 space-y-2">
+                                <Marquee items={techStack1} direction="left" speed={40} />
+                                <Marquee items={techStack2} direction="right" speed={35} />
+                            </div>
+                        </section>
 
-                <VerticalStripes />
-            </div>
-        </section>
+                        <section className="relative w-full border-b border-border">
+                            {/* <div className="h-12 md:h-14 bg-stripe border-b border-border " /> */}
+                            <div className="p-4 md:px-8 md:py-6">
+                                <h1 className="text-xl md:text-2xl font-medium tracking-tight">Work Experience so far</h1>
+                            </div>
+                            <div className="p-4 md:px-8 md:py-6">
+                                <p></p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div>
+                                <h1>People who worked with me</h1>
+                            </div>
+                        </section>
+
+                    </main>
+
+                    <VerticalStripes />
+                </div>
+            </section>
+        </div>
     );
 }
 
@@ -219,36 +237,10 @@ const MailButton = ({ email }: { email: string }) => {
     );
 };
 
-const ResumeButton = () => {
-    const [isHovered, setIsHovered] = useState(false);
 
-    return (
-        <motion.button
-            onHoverStart={() => setIsHovered(true)}
-            onHoverEnd={() => setIsHovered(false)}
-            className="flex items-center gap-2 px-3 md:px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-[10px] md:text-sm font-medium transition-all hover:ring-2 hover:ring-primary/20"
-        >
-            <span>Resume</span>
-            <AnimatePresence mode="popLayout">
-                {isHovered && (
-                    <motion.span
-                        initial={{ width: 0, opacity: 0, scale: 0.5 }}
-                        animate={{ width: "auto", opacity: 1, scale: 1 }}
-                        exit={{ width: 0, opacity: 0, scale: 0.5 }}
-                        className="overflow-hidden"
-                    >
-                        <FileCode className="w-3 h-3 md:w-4 md:h-4" />
-                    </motion.span>
-                )}
-            </AnimatePresence>
-        </motion.button>
-    );
-};
 
 const VerticalStripes = () => {
     return (
-        <div className="relative z-10 h-full w-14 border-l border-r border-border shrink-0 bg-background">
-            <div className="absolute bottom-0 left-0 right-0 h-14 border-t border-border bg-stripe" />
-        </div>
+        <div className="relative z-10 min-h-full w-14 border-l border-r border-border shrink-0 bg-background" />
     )
 }
