@@ -1,23 +1,53 @@
 "use client";
 
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react'
+import { useState, useEffect } from "react";
 import { FileCode } from "lucide-react";
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from 'motion/react'
 import ThemeToggle from "./theme-toggle";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+const NavItem = ({ href, children, active }: { href: string; children: React.ReactNode; active: boolean }) => (
+    <Link 
+        href={href} 
+        className={`relative h-full flex items-center text-xs md:text-sm font-medium transition-colors px-1 ${
+            active ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+        }`}
+    >
+        <span>{children}</span>
+        {active && (
+            <motion.div 
+                layoutId="header-nav-underline"
+                className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary z-10"
+                transition={{ type: "spring", stiffness: 380, damping: 30 }}
+            />
+        )}
+    </Link>
+);
 
 export default function Header() {
-    const [scrolling, setIsScrolling] = useState(false);
+    const pathname = usePathname();
+    const isHome = pathname === "/";
+    const { scrollY } = useScroll();
+    const [scrolling, setScrolling] = useState(false);
 
+    // This hook is much more reliable than manual listeners for SPA navigation
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        if (isHome) {
+            setScrolling(latest > 240);
+        }
+    });
+
+    // Check initial position on mount
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolling(window.scrollY > 10);
-        };
-        handleScroll(); 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+        if (!isHome) {
+            setScrolling(true);
+        } else {
+            setScrolling(window.scrollY > 240);
+        }
+    }, [isHome]);
 
     return (
         <header className="sticky top-0 z-50 w-full h-14 border-b border-border bg-background/80 backdrop-blur-md">
@@ -25,13 +55,13 @@ export default function Header() {
                 {/* Left Crossing Box */}
                 <div className="w-14 bg-background bg-stripe border-l border-r border-border h-full shrink-0" />
 
-                <div className="flex flex-1 items-center justify-between px-4 ">
-                    <nav className="flex items-center gap-4 md:gap-8">
+                <div className="flex flex-1 items-center justify-between px-4 h-full">
+                    <nav className="flex items-center gap-4 md:gap-8 h-full">
                         <AnimatePresence>
                             {scrolling && (
                                 <motion.a
                                     key="logo"
-                                    href="#home"
+                                    href="/"
                                     initial={{ opacity: 0, scale: 0.8, y: 10 }}
                                     animate={{ opacity: 1, scale: 1, y: 0 }}
                                     exit={{ opacity: 0, scale: 0.8, y: 10 }}
@@ -48,6 +78,7 @@ export default function Header() {
                                             src="/Logo.png"
                                             alt="Logo"
                                             fill
+                                            sizes="32px"
                                             priority
                                             className="object-contain drop-shadow-sm transition-all dark:hidden"
                                         />
@@ -55,6 +86,7 @@ export default function Header() {
                                             src="/LightLogo.png"
                                             alt="Logo"
                                             fill
+                                            sizes="32px"
                                             priority
                                             className="object-contain drop-shadow-sm transition-all hidden dark:block"
                                         />
@@ -62,12 +94,12 @@ export default function Header() {
                                 </motion.a>
                             )}
                         </AnimatePresence>
-                        <a href="/blogs" className="text-xs md:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                        <NavItem href="/blogs" active={pathname.startsWith("/blogs")}>
                             Blogs
-                        </a>
-                        <a href="/personal" className="text-xs md:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                        </NavItem>
+                        <NavItem href="/personal" active={pathname.startsWith("/personal")}>
                             Personal
-                        </a>
+                        </NavItem>
                     </nav>
 
                     <div className="flex items-center gap-2">

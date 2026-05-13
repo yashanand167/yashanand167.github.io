@@ -34,15 +34,15 @@ export function Marquee({
           repeat: Infinity,
           ease: "linear",
         }}
-        className="flex shrink-0 items-center gap-8 px-4"
+        className="flex shrink-0 items-center gap-6 md:gap-8 px-4"
       >
         {duplicatedItems.map((item, idx) => (
           <div
             key={idx}
-            className="flex items-center gap-3 rounded-full border border-border bg-muted/30 px-6 py-3 backdrop-blur-sm transition-colors hover:bg-muted/50"
+            className="flex items-center gap-2 md:gap-3 rounded-full border border-border bg-muted/30 px-4 py-2 md:px-6 md:py-3 backdrop-blur-sm transition-colors hover:bg-muted/50"
           >
-            {item.icon && <span className="h-5 w-5">{item.icon}</span>}
-            <span className="text-sm font-medium tracking-tight text-foreground whitespace-nowrap">
+            {item.icon && <span className="h-4 w-4 md:h-5 md:w-5">{item.icon}</span>}
+            <span className="text-xs md:text-sm font-medium tracking-tight text-foreground whitespace-nowrap">
               {item.name}
             </span>
           </div>
