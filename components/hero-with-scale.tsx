@@ -145,7 +145,7 @@ export default function HeroWithScale() {
                                     People who worked with me
                                 </h2>
                                 
-                                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">
                                     {/* Card 1: Jotham (Large) */}
                                     <div className="md:col-span-2 md:row-span-2 border border-dotted border-foreground/20 p-6 md:p-8 flex flex-col justify-between bg-muted/5 hover:bg-muted/10 transition-all duration-300 group relative overflow-hidden">
                                         <div className="relative z-10">
@@ -238,7 +238,7 @@ export default function HeroWithScale() {
                                 <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-8">
                                     Connect
                                 </h2>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4">
                                     {/* Twitter */}
                                     <a 
                                         href="https://twitter.com/yashanand167" 

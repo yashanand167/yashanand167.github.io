@@ -12,18 +12,18 @@ export async function generateStaticParams() {
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
-    
+
     try {
         const post = await getPostData(slug);
 
         return (
             <div className="max-w-5xl mx-auto w-full min-h-screen flex border-x border-border">
                 {/* Left Stripe */}
-                <div className="w-14 bg-background bg-stripe border-r border-border shrink-0 hidden md:block" />
+                <div className="w-6 md:w-14 bg-background bg-stripe border-r border-border shrink-0 hidden md:block" />
 
                 <main className="flex-1 p-6 md:p-12">
-                    <Link 
-                        href="/blogs" 
+                    <Link
+                        href="/blogs"
                         className="inline-flex items-center gap-2 text-xs md:text-sm text-muted-foreground hover:text-foreground mb-12 transition-colors group"
                     >
                         <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
@@ -45,15 +45,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                         </header>
 
                         {/* Blog Content */}
-                        <div 
+                        <div
                             className="blog-content text-muted-foreground leading-relaxed md:text-lg space-y-6"
-                            dangerouslySetInnerHTML={{ __html: post.contentHtml || "" }} 
+                            dangerouslySetInnerHTML={{ __html: post.contentHtml || "" }}
                         />
                     </article>
                 </main>
 
                 {/* Right Stripe */}
-                <div className="w-14 bg-background bg-stripe border-l border-border shrink-0 hidden md:block" />
+                <div className="w-6 md:w-14 bg-background bg-stripe border-l border-border shrink-0 hidden md:block" />
             </div>
         );
     } catch (e) {

@@ -11,7 +11,7 @@ export default function BlogsPage() {
             <Header />
             <div className="max-w-5xl mx-auto w-full min-h-screen flex border-x border-border">
                 {/* Left Stipe */}
-                <div className="w-14 bg-background  border-r border-border shrink-0 hidden md:block" />
+                <div className="w-6 md:w-14 bg-background  border-r border-border shrink-0 hidden md:block" />
 
                 <main className="flex-1 min-w-0">
                     <div className="p-4 md:px-8 md:py-6 border-b border-border">
@@ -55,7 +55,7 @@ export default function BlogsPage() {
                 </main>
 
                 {/* Right Stripe */}
-                <div className="w-14 bg-background  border-l border-border shrink-0 hidden md:block" />
+                <div className="w-6 md:w-14 bg-background  border-l border-border shrink-0 hidden md:block" />
             </div>
         </main>
     );
