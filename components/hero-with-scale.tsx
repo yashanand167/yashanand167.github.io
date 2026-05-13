@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, AnimatePresence } from 'motion/react'
 import { FileCode, Mail, MailOpen, ArrowUpRight } from "lucide-react";
+import { GitHubCalendar } from "react-github-calendar";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import ThemeToggle from "./theme-toggle";
@@ -11,6 +12,17 @@ import { Marquee } from "./marquee";
 import Header from "./Header";
 
 export default function HeroWithScale() {
+    const { resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const calendarTheme = {
+        light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
+        dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
+    };
 
     return (
         <div className="w-full flex flex-col min-h-screen">
@@ -105,6 +117,19 @@ export default function HeroWithScale() {
                                         ))}
                                     </ul>
                                 </div>
+                                <div className="flex justify-center mt-10 overflow-hidden ">
+                                    {mounted && (
+                                        <GitHubCalendar 
+                                            username="yashanand167" 
+                                            year={2026}
+                                            theme={calendarTheme}
+                                            colorScheme={resolvedTheme === 'dark' ? 'dark' : 'light'}
+                                            fontSize={12}
+                                            blockSize={11}
+                                            blockMargin={4}
+                                        />
+                                    )}
+                                </div>
                             </section>
 
                             {/* Row 2: Social Connectivity Row */}
@@ -146,6 +171,47 @@ export default function HeroWithScale() {
                                 </h2>
                                 
                                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">
+                                    {/* Founder Card */}
+                                    <div className="md:col-span-2 border border-dotted border-primary/30 p-6 md:p-8 flex flex-col justify-between bg-primary/5 hover:bg-primary/10 transition-all duration-300 group relative overflow-hidden">
+                                        <div className="relative z-10">
+                                            <div className="flex items-center gap-4 mb-6">
+                                                <div className="w-12 h-12 rounded-full border border-dotted border-primary/30 bg-background flex items-center justify-center text-sm font-mono shadow-sm group-hover:scale-110 transition-transform text-primary">FN</div>
+                                                <div>
+                                                    <h3 className="font-medium text-foreground text-lg">Founder</h3>
+                                                    <p className="text-xs text-primary font-mono uppercase tracking-wider">CEO & Founder</p>
+                                                </div>
+                                            </div>
+                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
+                                                "Yash is a visionary engineer who doesn't just write code, but understands the soul of the product. His ability to anticipate user needs and implement them flawlessly is rare."
+                                            </p>
+                                        </div>
+                                        <div className="mt-8 flex items-center gap-3 relative z-10">
+                                            <div className="h-px flex-1 bg-primary/20 border-dotted border-t"></div>
+                                            <span className="text-[10px] font-mono text-primary uppercase tracking-[0.2em]">Strategic Partner</span>
+                                        </div>
+                                        <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 -mr-16 -mt-16 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+                                    </div>
+
+                                    {/* Co-founder Card */}
+                                    <div className="md:col-span-2 border border-dotted border-primary/30 p-6 md:p-8 flex flex-col justify-between bg-primary/5 hover:bg-primary/10 transition-all duration-300 group relative overflow-hidden">
+                                        <div className="relative z-10">
+                                            <div className="flex items-center gap-4 mb-6">
+                                                <div className="w-12 h-12 rounded-full border border-dotted border-primary/30 bg-background flex items-center justify-center text-sm font-mono shadow-sm group-hover:scale-110 transition-transform text-primary">CF</div>
+                                                <div>
+                                                    <h3 className="font-medium text-foreground text-lg">Co-Founder</h3>
+                                                    <p className="text-xs text-primary font-mono uppercase tracking-wider">CTO & Co-founder</p>
+                                                </div>
+                                            </div>
+                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
+                                                "Working with Yash has been an absolute game-changer for our technical roadmap. He brings a level of craftsmanship and architectural thinking that elevated our entire platform."
+                                            </p>
+                                        </div>
+                                        <div className="mt-8 flex items-center gap-3 relative z-10">
+                                            <div className="h-px flex-1 bg-primary/20 border-dotted border-t"></div>
+                                            <span className="text-[10px] font-mono text-primary uppercase tracking-[0.2em]">Technical Partner</span>
+                                        </div>
+                                        <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 -mr-16 -mt-16 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+                                    </div>
                                     {/* Card 1: Jotham (Large) */}
                                     <div className="md:col-span-2 md:row-span-2 border border-dotted border-foreground/20 p-6 md:p-8 flex flex-col justify-between bg-muted/5 hover:bg-muted/10 transition-all duration-300 group relative overflow-hidden">
                                         <div className="relative z-10">
