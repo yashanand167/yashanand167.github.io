@@ -10,15 +10,14 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const NavItem = ({ href, children, active }: { href: string; children: React.ReactNode; active: boolean }) => (
-    <Link 
-        href={href} 
-        className={`relative h-full flex items-center text-xs md:text-sm font-medium transition-colors px-1 ${
-            active ? "text-foreground" : "text-muted-foreground hover:text-foreground"
-        }`}
+    <Link
+        href={href}
+        className={`relative h-full flex items-center text-xs md:text-sm font-medium transition-colors px-1 ${active ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+            }`}
     >
         <span>{children}</span>
         {active && (
-            <motion.div 
+            <motion.div
                 layoutId="header-nav-underline"
                 className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary z-10"
                 transition={{ type: "spring", stiffness: 380, damping: 30 }}
