@@ -85,7 +85,7 @@ export default function HeroWithScale() {
                                 {/* Name and Animated Title Cell */}
                                 <div className="flex-1 flex flex-col justify-center p-4 md:p-8 bg-stripe-horizontal/[0.02]">
                                     <h1 className="text-xl md:text-4xl font-medium tracking-tight text-foreground">
-                                        Yash Anand
+                                        Hi, I am Yash Anand
                                     </h1>
                                     <div className="text-[10px] md:text-base font-mono text-muted-foreground mt-1 md:mt-2">
                                         <RotateWords words={["Product-Focused Engineer", "Frontend Developer", "Open Source Contributor", "Product Designer", "Creative Technologist"]} />
@@ -100,7 +100,7 @@ export default function HeroWithScale() {
                                 </h2>
                                 <div className="space-y-8">
                                     <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl">
-                                        I'm a product-focused engineer dedicated to bridging the gap between design and code.
+                                        A product-focused engineer dedicated to bridging the gap between design and code.
                                         I specialize in building high-performance web interfaces and contributing to open-source
                                         projects that empower developers to create beautiful digital experiences.
                                     </p>

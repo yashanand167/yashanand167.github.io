@@ -1,5 +1,6 @@
 'use client'
 
+import DesignToCode from "@/components/design-to-code";
 import Header from "@/components/Header";
 import HeroWithScale from "@/components/hero-with-scale";
 import ThemeToggle from "@/components/theme-toggle";
@@ -77,18 +78,51 @@ export default function Home() {
 
                         <section>
                             <div className="h-[1px] w-full bg-border" />
-                            <div className="p-8 md:p-16">
-                                <h1>What my design to code thought process looks like</h1>
-                                <p>
+                            <DesignToCode />
+                        </section>
 
+                        <section>
+                            <div className="h-[1px] w-full bg-border" />
+                            <div className="p-8 md:p-16 flex flex-col items-center text-center">
+                                <h1 className="text-xl md:text-2xl font-medium tracking-tight mb-4">Tools & Stack I'm Currently Exploring</h1>
+                                <p className="text-sm text-muted-foreground mb-10 max-w-lg mx-auto">
+                                    A continuously evolving playground. Here are some of the technologies I'm currently diving into and experimenting with.
                                 </p>
+                                <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+                                    {[
+                                        { name: "Rive App", image: "https://github.com/rive-app.png" },
+                                        { name: "Langchain", image: "https://github.com/langchain-ai.png" },
+                                        { name: "TanStack Start", image: "https://github.com/TanStack.png" }
+                                    ].map((tool, idx) => (
+                                        <div key={idx} className="flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 border border-dotted border-foreground/20 rounded-full text-xs md:text-sm font-mono text-foreground bg-muted/5 hover:bg-primary/5 hover:border-primary/30 transition-all cursor-default shadow-sm group">
+                                            <div className="w-5 h-5 md:w-6 md:h-6 rounded-full overflow-hidden bg-background border border-border flex items-center justify-center group-hover:scale-110 transition-transform p-[2px]">
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                <img src={tool.image} alt={tool.name} className="w-full h-full object-contain rounded-full" />
+                                            </div>
+                                            <span>{tool.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </section>
+
+                        
                     </main>
 
                     <VerticalStripes />
                 </div>
             </section>
+            {/* Text Slogan Footer */}
+            <footer className="w-full relative h-48 md:h-80 flex items-center justify-center border-t border-border overflow-hidden bg-background group">
+                <div className="absolute inset-0 bg-dot opacity-[0.5] pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-0" />
+                
+                <h2 
+                    className="relative z-10 text-[7vw] md:text-[7vw] lg:text-[6vw] font-bold tracking-tighter whitespace-nowrap opacity-20 group-hover:opacity-100 transition-all duration-1000 uppercase text-foreground [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px_currentColor] md:[-webkit-text-stroke:2px_currentColor] cursor-default select-none group-hover:scale-105"
+                >
+                    Imagine, Craft, Conquer
+                </h2>
+            </footer>
         </main>
     );
 }
