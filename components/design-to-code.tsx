@@ -4,13 +4,13 @@ export default function DesignJourney() {
 
     return (
 
-        <section className="relative mx-auto max-w-5xl px-6 py-32">
+        <section className="relative mx-auto max-w-5xl px-8 md:px-16 py-8 md:py-16">
 
-            <div className="mb-20">
+            <div className="mb-12 md:mb-16">
 
                 <p className="text-sm text-neutral-500">
 
-                    My Process
+                    My Work Process
 
                 </p>
 

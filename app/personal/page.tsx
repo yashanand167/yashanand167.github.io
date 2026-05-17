@@ -75,14 +75,21 @@ export default function Home() {
                                 </p>
                             </div>
                         </section>
-
-                        <section>
-                            <div className="h-[1px] w-full bg-border" />
-                            <DesignToCode />
+                        <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal">
+                            <div className="absolute inset-0 bg-gradient-to-b from-background to-transparent pointer-events-none" />
                         </section>
 
                         <section>
-                            <div className="h-[1px] w-full bg-border" />
+                            <div className="h-[1px] w-full" />
+                            <DesignToCode />
+                        </section>
+
+                        <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal">
+                            <div className="absolute inset-0 bg-gradient-to-b from-background to-transparent pointer-events-none" />
+                        </section>
+
+                        <section>
+                            <div className="h-[1px] w-full" />
                             <div className="p-8 md:p-16 flex flex-col items-center text-center">
                                 <h1 className="text-xl md:text-2xl font-medium tracking-tight mb-4">Tools & Stack I'm Currently Exploring</h1>
                                 <p className="text-sm text-muted-foreground mb-10 max-w-lg mx-auto">

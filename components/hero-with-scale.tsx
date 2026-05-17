@@ -146,7 +146,7 @@ export default function HeroWithScale() {
                         </div> */}
                         </section>
 
-                        <section className="relative w-full border-b border-border">
+                        <section className="relative w-full">
                             <div className="p-4 md:p-8">
                                 <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-4">
                                     Stacks I am familiar with
@@ -156,6 +156,10 @@ export default function HeroWithScale() {
                                     <Marquee items={techStack2} direction="right" speed={35} />
                                 </div>
                             </div>
+                        </section>
+
+                        <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal">
+                            <div className="absolute inset-0 bg-gradient-to-b from-background to-transparent pointer-events-none" />
                         </section>
 
                         <section className="relative w-full border-b border-border">
@@ -169,7 +173,7 @@ export default function HeroWithScale() {
                             </div>
                         </section>
 
-                        <section className="relative w-full border-b border-border overflow-hidden">
+                        <section className="relative w-full overflow-hidden">
                             <div className="p-4 md:p-8">
                                 <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-8">
                                     People who worked with me
@@ -298,13 +302,16 @@ export default function HeroWithScale() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="hidden md:block absolute right-0 top-0 bottom-0 w-24 bg-stripe opacity-[0.02]"></div>
                                     </div>
                                 </div>
                             </div>
                         </section>
 
-                        <section className="relative w-full border-b border-border">
+                        <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal">
+                            <div className="absolute inset-0 bg-gradient-to-b from-background to-transparent pointer-events-none" />
+                        </section>
+
+                        <section className="relative w-full">
                             <div className="p-4 md:p-8">
                                 <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-8">
                                     Let's Connect
@@ -380,6 +387,7 @@ export default function HeroWithScale() {
                     <VerticalStripes />
                 </div>
             </section>
+
         </div>
     );
 }
@@ -398,73 +406,13 @@ const techStack1 = [
 
 const techStack2 = [
     { name: "Docker" },
-    { name: "AWS" },
+    { name: "Github" },
+    { name: "Gitlab" },
     { name: "Figma" },
     { name: "Three.js" },
     { name: "GraphQL" },
     { name: "Supabase" },
 ];
-
-const SocialIcon = ({ src, alt }: { src: string; alt: string }) => (
-    <div className="w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl border border-border overflow-hidden bg-background shadow-sm hover:border-primary/50 transition-all cursor-pointer shrink-0 relative group active:scale-95">
-        <Image src={src} alt={alt} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-    </div>
-);
-
-const MailButton = ({ email }: { email: string }) => {
-    const [isHovered, setIsHovered] = useState(false);
-
-    return (
-        <motion.div
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            animate={{ width: isHovered ? "auto" : "" }}
-            className="h-10 md:h-14 w-10 md:w-14 rounded-lg md:rounded-xl border border-border flex items-center justify-center bg-background shadow-sm hover:border-primary/50 cursor-pointer overflow-hidden transition-all shrink-0 px-2 md:px-5 active:scale-95"
-            style={{ width: isHovered ? "auto" : undefined }}
-        >
-            <div className="flex items-center gap-2 md:gap-3 whitespace-nowrap">
-                <div className="flex items-center justify-center w-5 h-5 md:w-6 md:h-6 shrink-0">
-                    <AnimatePresence mode="wait" initial={false}>
-                        {isHovered ? (
-                            <motion.div
-                                key="open"
-                                initial={{ scale: 0.5, opacity: 0, rotate: -10 }}
-                                animate={{ scale: 1, opacity: 1, rotate: 0 }}
-                                exit={{ scale: 0.5, opacity: 0, rotate: 10 }}
-                                transition={{ duration: 0.2 }}
-                            >
-                                <MailOpen className="w-full h-full text-primary" />
-                            </motion.div>
-                        ) : (
-                            <motion.div
-                                key="closed"
-                                initial={{ scale: 0.5, opacity: 0, rotate: 10 }}
-                                animate={{ scale: 1, opacity: 1, rotate: 0 }}
-                                exit={{ scale: 0.5, opacity: 0, rotate: -10 }}
-                                transition={{ duration: 0.2 }}
-                            >
-                                <Mail className="w-full h-full text-muted-foreground" />
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
-                </div>
-
-                <AnimatePresence>
-                    {isHovered && (
-                        <motion.span
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -10 }}
-                            className="text-[10px] md:text-sm font-medium text-foreground tracking-tight"
-                        >
-                            {email}
-                        </motion.span>
-                    )}
-                </AnimatePresence>
-            </div>
-        </motion.div>
-    );
-};
 
 
 
