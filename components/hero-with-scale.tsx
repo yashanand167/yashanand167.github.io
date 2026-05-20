@@ -191,14 +191,14 @@ export default function HeroWithScale() {
                                         
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">Lead Product Designer</h4>
-                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 1</span>
+                                                <h4 className="font-medium text-foreground text-lg">Event Module Design</h4>
+                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Mar 2026 - May 2026</span>
                                             </div>
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Designed the entire product ecosystem from scratch. Conducted extensive brainstorming sessions, created wireframes, and established a scalable design system for an AI-powered healthcare network.
+                                                Designed the event module for the next version within the existing platform architecture.
                                             </p>
                                             <div className="flex flex-wrap gap-2 mt-4">
-                                                {["Figma", "Design Systems", "Prototyping"].map((tech, i) => (
+                                                {["Product Design", "Figma", "Feature Extension"].map((tech, i) => (
                                                     <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
                                                 ))}
                                             </div>
@@ -212,14 +212,14 @@ export default function HeroWithScale() {
                                         
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">Frontend Developer (React Native)</h4>
-                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 2</span>
+                                                <h4 className="font-medium text-foreground text-lg">UI Refinement & API Testing</h4>
+                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Jan 2026 - Feb 2026</span>
                                             </div>
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Transitioned from design to code. Spearheaded the frontend development of the mobile application using React Native, translating complex UI/UX designs into fluid, interactive components.
+                                                Refined UI components in the mobile app and wrote API test files using Jest.
                                             </p>
                                             <div className="flex flex-wrap gap-2 mt-4">
-                                                {["React Native", "TypeScript", "Mobile App"].map((tech, i) => (
+                                                {["UI/UX", "Jest", "API Testing"].map((tech, i) => (
                                                     <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
                                                 ))}
                                             </div>
@@ -233,14 +233,14 @@ export default function HeroWithScale() {
                                         
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">API Integration & State Management</h4>
-                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 3</span>
+                                                <h4 className="font-medium text-foreground text-lg">Website Design & Dashboard</h4>
+                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Nov 2025 - Dec 2025</span>
                                             </div>
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Implemented robust state management solutions and integrated complex backend REST APIs to handle dynamic data flows seamlessly across the client-side architecture.
+                                                Designed the Framer website leveraging Figma and Framer, and built the platform dashboard using React and Axios for data fetching.
                                             </p>
                                             <div className="flex flex-wrap gap-2 mt-4">
-                                                {["Redux", "REST APIs", "React Query"].map((tech, i) => (
+                                                {["Framer", "Figma", "React", "Axios"].map((tech, i) => (
                                                     <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
                                                 ))}
                                             </div>
@@ -254,14 +254,35 @@ export default function HeroWithScale() {
                                         
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">UI Optimization & Architecture</h4>
-                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 4</span>
+                                                <h4 className="font-medium text-foreground text-lg">Frontend Development</h4>
+                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Oct 2025 - Nov 2025</span>
                                             </div>
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Refactored anti-patterns and optimized UI rendering pipelines. Established a scalable, component-based frontend architecture ensuring maintainability and high performance.
+                                                Developed the frontend of the mobile application using React Native (Expo).
                                             </p>
                                             <div className="flex flex-wrap gap-2 mt-4">
-                                                {["Performance", "Architecture", "Refactoring"].map((tech, i) => (
+                                                {["React Native", "Expo", "Frontend", "Zustand", "Tanstack Query"].map((tech, i) => (
+                                                    <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Role 5 */}
+                                    <div className="relative group">
+                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
+                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
+                                        
+                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
+                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                <h4 className="font-medium text-foreground text-lg">Product Design for Mobile App</h4>
+                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Aug 2025 - Oct 2025</span>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Designed the core product experience for the mobile application from scratch.
+                                            </p>
+                                            <div className="flex flex-wrap gap-2 mt-4">
+                                                {["Figma", "UI/UX", "Mobile Design", "User Research", "Competitor Analysis"].map((tech, i) => (
                                                     <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
                                                 ))}
                                             </div>
@@ -290,14 +311,14 @@ export default function HeroWithScale() {
                                         
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-foreground/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">Product Design & Strategy</h4>
-                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">2023 - Present</span>
+                                                <h4 className="font-medium text-foreground text-lg">AI Nutrition App</h4>
+                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 1</span>
                                             </div>
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Led design initiatives for international clients. Handled end-to-end product design, from initial research and wireframing to high-fidelity prototyping and design system creation.
+                                                Conducted comprehensive UX research and competitor analysis to establish the foundation and architecture of the application's design system.
                                             </p>
                                             <div className="flex flex-wrap gap-2 mt-4">
-                                                {["Figma", "UI/UX", "Design Systems", "Prototyping"].map((tech, i) => (
+                                                {["UX Research", "Competitor Analysis", "Design System"].map((tech, i) => (
                                                     <span key={i} className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">{tech}</span>
                                                 ))}
                                             </div>
@@ -311,14 +332,14 @@ export default function HeroWithScale() {
                                         
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-foreground/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">Landing Pages & Portfolios</h4>
-                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">2022 - 2023</span>
+                                                <h4 className="font-medium text-foreground text-lg">UI Design & Dev Handoff</h4>
+                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 2</span>
                                             </div>
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Designed and developed highly performant landing pages and portfolios. Focused on animations, SEO optimization, and responsive design to ensure maximum conversion rates.
+                                                Created high-fidelity UI designs in Figma and ensured a seamless development handoff with detailed specifications.
                                             </p>
                                             <div className="flex flex-wrap gap-2 mt-4">
-                                                {["React", "Tailwind CSS", "Framer Motion", "SEO"].map((tech, i) => (
+                                                {["UI Design", "Figma", "Dev Handoff"].map((tech, i) => (
                                                     <span key={i} className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">{tech}</span>
                                                 ))}
                                             </div>

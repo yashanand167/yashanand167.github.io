@@ -2,8 +2,7 @@
 
 import DesignToCode from "@/components/design-to-code";
 import Header from "@/components/Header";
-import HeroWithScale from "@/components/hero-with-scale";
-import ThemeToggle from "@/components/theme-toggle";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
     return (
@@ -59,20 +58,134 @@ export default function Home() {
 
                         <section>
                             <div className="p-8 md:p-16">
-                                <h1 className="text-xl md:text-2xl font-medium tracking-tight mb-4">Some of my mini side projects</h1>
-                                <p>
-                                    
-                                </p>
+                                <h1 className="text-xl md:text-2xl font-medium tracking-tight mb-8">Some of my mini side projects</h1>
+                                
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    {/* askNow Project Card */}
+                                    <div className="group relative flex flex-col rounded-2xl border border-dotted border-foreground/20 bg-muted/5 overflow-hidden hover:border-foreground/30 transition-all shadow-sm">
+                                        {/* Image Container */}
+                                        <div className="aspect-video w-full bg-muted/20 relative overflow-hidden border-b border-dotted border-foreground/20 flex items-center justify-center bg-gradient-to-br from-primary/5 to-muted">
+                                            {/* NOTE: Replace the src below with your actual attached image path */}
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                                            <img 
+                                                src="/Logo.png" 
+                                                alt="askNow Project Preview" 
+                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                                                onError={(e) => {
+                                                    // Fallback if image fails to load or isn't set properly
+                                                    e.currentTarget.style.display = 'none';
+                                                    if (e.currentTarget.nextElementSibling) {
+                                                        (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'flex';
+                                                    }
+                                                }}
+                                            />
+                                            {/* Text fallback when image is missing */}
+                                            <div className="absolute inset-0 hidden items-center justify-center">
+                                                <h3 className="text-4xl font-bold text-foreground/20 tracking-tighter">askNow</h3>
+                                            </div>
+                                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                        </div>
+                                        
+                                        {/* Content */}
+                                        <div className="p-6 flex flex-col flex-1">
+                                            <div className="flex items-center justify-between mb-3 gap-2">
+                                                <h3 className="text-lg font-medium text-foreground">askNow</h3>
+                                                <span className="shrink-0 px-2 py-1 text-[10px] font-mono text-primary bg-primary/10 border border-primary/20 rounded-md">College Group Project</span>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground mb-6 leading-relaxed flex-1">
+                                                A collaborative Q&A platform tailored for students. It enables seamless knowledge sharing, peer-to-peer engagement, and real-time discussions.
+                                            </p>
+                                            
+                                            <div className="flex items-center justify-between mt-auto">
+                                                <div className="flex flex-wrap gap-2">
+                                                    <span className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">Next.js</span>
+                                                    <span className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">React</span>
+                                                    <span className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">Tailwind</span>
+                                                </div>
+                                                <a 
+                                                    href="#" 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer" 
+                                                    className="shrink-0 text-xs font-medium text-foreground hover:text-primary transition-colors flex items-center gap-1 group/link"
+                                                >
+                                                    Live Site <ArrowRight className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* zyra Project Card */}
+                                    <div className="group relative flex flex-col rounded-2xl border border-dotted border-foreground/20 bg-muted/5 overflow-hidden hover:border-foreground/30 transition-all shadow-sm">
+                                        {/* Image Container */}
+                                        <div className="aspect-video w-full bg-muted/20 relative overflow-hidden border-b border-dotted border-foreground/20 flex items-center justify-center bg-gradient-to-br from-primary/5 to-muted">
+                                            {/* Optional: Add an img tag here if you have an image for zyra */}
+                                            {/* Text fallback when image is missing */}
+                                            <div className="absolute inset-0 flex items-center justify-center">
+                                                <h3 className="text-4xl font-bold text-foreground/20 tracking-tighter">zyra</h3>
+                                            </div>
+                                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                        </div>
+                                        
+                                        {/* Content */}
+                                        <div className="p-6 flex flex-col flex-1">
+                                            <div className="flex items-center justify-between mb-3 gap-2">
+                                                <h3 className="text-lg font-medium text-foreground">zyra</h3>
+                                                <span className="shrink-0 px-2 py-1 text-[10px] font-mono text-muted-foreground bg-muted/50 border border-border/50 rounded-md">Works on Localhost</span>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground mb-6 leading-relaxed flex-1">
+                                                A minimal rich text editor built from the ground up to deeply explore and integrate the Tiptap library capabilities.
+                                            </p>
+                                            
+                                            <div className="flex items-center justify-between mt-auto">
+                                                <div className="flex flex-wrap gap-2">
+                                                    <span className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">Next.js</span>
+                                                    <span className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">Tailwind</span>
+                                                    <span className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">Framer Motion</span>
+                                                </div>
+                                                <a 
+                                                    href="#" 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer" 
+                                                    className="shrink-0 text-xs font-medium text-foreground hover:text-primary transition-colors flex items-center gap-1 group/link"
+                                                >
+                                                    GitHub <ArrowRight className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </section>
 
                         <section>
                             <div className="h-[1px] w-full bg-border" />
                             <div className="p-8 md:p-16">
-                                <h1 className="text-xl md:text-2xl font-medium tracking-tight mb-4">What am I building currently</h1>
-                                <p>
-
-                                </p>
+                                <h1 className="text-xl md:text-2xl font-medium tracking-tight mb-8">What am I building currently</h1>
+                                
+                                <div className="border border-dotted border-foreground/20 rounded-2xl p-6 md:p-8 bg-muted/5 relative overflow-hidden group hover:border-foreground/30 transition-colors">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 -mr-16 -mt-16 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+                                    <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                                        <div>
+                                            <div className="flex items-center gap-3 mb-3">
+                                                <h3 className="text-lg md:text-xl font-medium text-foreground">Inertia-UI</h3>
+                                                <span className="px-2 py-1 text-[10px] font-mono text-primary bg-primary/10 border border-primary/20 rounded-md">Product Design in Process</span>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
+                                                A modern, highly customizable component library tailored for dynamic web applications. Currently focusing on the core product design, defining design tokens, and establishing a scalable component architecture.
+                                            </p>
+                                        </div>
+                                        
+                                        <a 
+                                            href="https://www.figma.com/design/PBv5vZwApM9jznIO8coAFs/Inertia?node-id=67-46&t=RM7kbxONhidMbwo0-1" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className="shrink-0 flex items-center justify-center gap-2 px-5 py-2.5 bg-foreground text-background rounded-full text-sm font-medium hover:scale-105 transition-transform w-fit group/btn"
+                                        >
+                                            <span>View on Figma</span>
+                                            <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                         <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal">

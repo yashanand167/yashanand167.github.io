@@ -7,23 +7,14 @@ export default function DesignJourney() {
         <section className="relative mx-auto max-w-5xl px-8 md:px-16 py-8 md:py-16">
 
             <div className="mb-12 md:mb-16">
-
                 <p className="text-sm text-neutral-500">
-
                     My Work Process
-
                 </p>
-
                 <h2 className="mt-2 text-2xl md:text-2xl font-medium tracking-tight">
-
                     How ideas become interfaces
-
                 </h2>
-
             </div>
-
             <div className="relative">
-
                 <motion.div
 
                     initial={{ height: 0 }}
