@@ -14,6 +14,7 @@ export interface BlogPost {
     contentHtml?: string;
     category?: string;
     readingTime?: string;
+    image: string;
 }
 
 export function getAllPosts(): BlogPost[] {
@@ -39,6 +40,7 @@ export function getAllPosts(): BlogPost[] {
                 excerpt: matterResult.data.excerpt || "",
                 category: matterResult.data.category || "Design",
                 readingTime: matterResult.data.readingTime || "5 min read",
+                image: matterResult.data.image || "/Image.jpg",
                 ...matterResult.data,
             } as BlogPost;
         });
@@ -65,6 +67,7 @@ export async function getPostData(slug: string): Promise<BlogPost> {
         excerpt: matterResult.data.excerpt || "",
         category: matterResult.data.category || "Design",
         readingTime: matterResult.data.readingTime || "5 min read",
+        image: matterResult.data.image || "/Image.jpg",
         ...matterResult.data,
     } as BlogPost;
 }

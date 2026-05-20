@@ -3,7 +3,8 @@ title: "Building Inertia-UI: A Journey into Design Systems"
 date: "2026-05-10"
 excerpt: "Exploring the challenges and triumphs of creating a high-performance component library for modern web applications."
 category: "Engineering"
-readingTime: "8 min read"
+readingTime: "2 min read"
+image: "/Landing Page.png"
 ---
 
 # Building Inertia-UI

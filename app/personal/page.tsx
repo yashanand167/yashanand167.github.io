@@ -59,9 +59,9 @@ export default function Home() {
 
                         <section>
                             <div className="p-8 md:p-16">
-                                <h1>Some of my mini side projects</h1>
+                                <h1 className="text-xl md:text-2xl font-medium tracking-tight mb-4">Some of my mini side projects</h1>
                                 <p>
-
+                                    
                                 </p>
                             </div>
                         </section>
@@ -69,7 +69,7 @@ export default function Home() {
                         <section>
                             <div className="h-[1px] w-full bg-border" />
                             <div className="p-8 md:p-16">
-                                <h1>What am I building currently</h1>
+                                <h1 className="text-xl md:text-2xl font-medium tracking-tight mb-4">What am I building currently</h1>
                                 <p>
 
                                 </p>
