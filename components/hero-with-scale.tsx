@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, AnimatePresence } from 'motion/react'
-import { FileCode, Mail, MailOpen, ArrowUpRight } from "lucide-react";
+import { FileCode, Mail, MailOpen, ArrowUpRight, Palette } from "lucide-react";
 import { GitHubCalendar } from "react-github-calendar";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
@@ -170,9 +170,13 @@ export default function HeroWithScale() {
                                 
                                 {/* Company Header */}
                                 <div className="flex items-center gap-4 mb-8">
-                                    <div className="w-16 h-16 rounded-2xl border border-dotted border-primary/40 bg-primary/5 flex items-center justify-center text-xl font-mono shadow-sm text-primary">DH</div>
+                                    <a href="https://dseide.com" target="_blank" rel="noopener noreferrer" className="w-16 h-16 rounded-2xl border border-dotted border-primary/40 bg-primary/5 flex items-center justify-center overflow-hidden shadow-sm relative group shrink-0">
+                                        <Image src="/images.png" alt="Dseide Healthcare Network" fill className="object-cover transition-transform group-hover:scale-110" />
+                                    </a>
                                     <div>
-                                        <h3 className="font-medium text-foreground text-xl">Dseide Healthcare Network</h3>
+                                        <a href="https://dseide.com" target="_blank" rel="noopener noreferrer" className="hover:underline transition-colors">
+                                            <h3 className="font-medium text-foreground text-xl">Dseide Healthcare Network</h3>
+                                        </a>
                                         <p className="text-sm text-muted-foreground font-mono mt-1">Full-stack & Product Design • Bangalore</p>
                                     </div>
                                 </div>
@@ -267,10 +271,12 @@ export default function HeroWithScale() {
 
                                 {/* Company 2 Header */}
                                 <div className="flex items-center gap-4 mb-8 mt-16">
-                                    <div className="w-16 h-16 rounded-2xl border border-dotted border-foreground/40 bg-muted/10 flex items-center justify-center text-xl font-mono shadow-sm text-foreground">FL</div>
+                                    <div className="w-16 h-16 rounded-2xl border border-dotted border-foreground/40 bg-muted/10 flex items-center justify-center text-xl font-mono shadow-sm text-foreground">
+                                        <Palette className="w-8 h-8 opacity-80" />
+                                    </div>
                                     <div>
-                                        <h3 className="font-medium text-foreground text-xl">Freelance Developer</h3>
-                                        <p className="text-sm text-muted-foreground font-mono mt-1">Full-stack Engineering • Global</p>
+                                        <h3 className="font-medium text-foreground text-xl">Freelance</h3>
+                                        <p className="text-sm text-muted-foreground font-mono mt-1">Product Design • Global</p>
                                     </div>
                                 </div>
 
@@ -284,14 +290,14 @@ export default function HeroWithScale() {
                                         
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-foreground/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">Full-stack Web Applications</h4>
+                                                <h4 className="font-medium text-foreground text-lg">Product Design & Strategy</h4>
                                                 <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">2023 - Present</span>
                                             </div>
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Built custom web applications for various international clients. Handled end-to-end development, from initial architecture and UI/UX design to backend implementation and deployment.
+                                                Led design initiatives for international clients. Handled end-to-end product design, from initial research and wireframing to high-fidelity prototyping and design system creation.
                                             </p>
                                             <div className="flex flex-wrap gap-2 mt-4">
-                                                {["Next.js", "Node.js", "PostgreSQL", "Vercel"].map((tech, i) => (
+                                                {["Figma", "UI/UX", "Design Systems", "Prototyping"].map((tech, i) => (
                                                     <span key={i} className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">{tech}</span>
                                                 ))}
                                             </div>
@@ -468,7 +474,7 @@ export default function HeroWithScale() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4">
                                     {/* Twitter */}
                                     <a
-                                        href="https://twitter.com/yashanand167"
+                                        href="https://x.com/yashanand167"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="border border-dotted border-foreground/20 p-6 flex items-center justify-between bg-muted/5 hover:bg-muted/10 transition-all duration-300 group"
@@ -484,7 +490,7 @@ export default function HeroWithScale() {
 
                                     {/* LinkedIn */}
                                     <a
-                                        href="https://linkedin.com/in/yashanand167"
+                                        href="https://www.linkedin.com/in/yash-anand-b7264b308/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="border border-dotted border-foreground/20 p-6 flex items-center justify-between bg-muted/5 hover:bg-muted/10 transition-all duration-300 group"
