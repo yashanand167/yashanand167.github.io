@@ -9,7 +9,7 @@ image: "/Untold Story.jpg"
 
 ## A Journey I Never Planned
 
-The day was 20th September 2022, I left my hometown (Kathmandu, Nepal) for the first time for my undergraduate studies in Bangalore, India. I was pretty uncertain about what I was gonna do. I had never eplored tech my life and had absolute zero knowledge on Software Engineering Field.
+The day was 20th September 2022, I left my hometown (Kathmandu, Nepal) for the first time for my undergraduate studies in Bangalore, India. I was pretty uncertain about what I was gonna do. I had never explored tech my life and had absolute zero knowledge on Software Engineering Field.
 
 I have been an artist since my childhood and I always knew that I wanted to pursue a career in the creative field. But I was not sure about what to do. But my parents told me "You are always free to take on your passion. But at one point
 you also need a degree right?". I agreed, they asked me to pass exams somehow and grab a degree and rest I can work on my passion. So, I agreed to go for Computer Science and Engineering not for exploring tech but just for degree. 

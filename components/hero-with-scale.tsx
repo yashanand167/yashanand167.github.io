@@ -164,11 +164,160 @@ export default function HeroWithScale() {
 
                         <section className="relative w-full border-b border-border">
                             <div className="p-4 md:p-8">
-                                <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-4">
+                                <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-8">
                                     Work Experience so far
                                 </h2>
-                                <div className="p-0">
-                                    <p className="text-sm md:text-base text-muted-foreground"></p>
+                                
+                                {/* Company Header */}
+                                <div className="flex items-center gap-4 mb-8">
+                                    <div className="w-16 h-16 rounded-2xl border border-dotted border-primary/40 bg-primary/5 flex items-center justify-center text-xl font-mono shadow-sm text-primary">DH</div>
+                                    <div>
+                                        <h3 className="font-medium text-foreground text-xl">Dseide Healthcare Network</h3>
+                                        <p className="text-sm text-muted-foreground font-mono mt-1">Full-stack & Product Design • Bangalore</p>
+                                    </div>
+                                </div>
+
+                                {/* Tree Branch Timeline */}
+                                <div className="ml-4 md:ml-8 border-l-2 border-border/50 pl-6 md:pl-8 pb-4 relative space-y-8 md:space-y-12">
+                                    {/* Role 1 */}
+                                    <div className="relative group">
+                                        {/* Connector Line & Dot */}
+                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
+                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
+                                        
+                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
+                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                <h4 className="font-medium text-foreground text-lg">Lead Product Designer</h4>
+                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 1</span>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Designed the entire product ecosystem from scratch. Conducted extensive brainstorming sessions, created wireframes, and established a scalable design system for an AI-powered healthcare network.
+                                            </p>
+                                            <div className="flex flex-wrap gap-2 mt-4">
+                                                {["Figma", "Design Systems", "Prototyping"].map((tech, i) => (
+                                                    <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Role 2 */}
+                                    <div className="relative group">
+                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
+                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
+                                        
+                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
+                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                <h4 className="font-medium text-foreground text-lg">Frontend Developer (React Native)</h4>
+                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 2</span>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Transitioned from design to code. Spearheaded the frontend development of the mobile application using React Native, translating complex UI/UX designs into fluid, interactive components.
+                                            </p>
+                                            <div className="flex flex-wrap gap-2 mt-4">
+                                                {["React Native", "TypeScript", "Mobile App"].map((tech, i) => (
+                                                    <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Role 3 */}
+                                    <div className="relative group">
+                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
+                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
+                                        
+                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
+                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                <h4 className="font-medium text-foreground text-lg">API Integration & State Management</h4>
+                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 3</span>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Implemented robust state management solutions and integrated complex backend REST APIs to handle dynamic data flows seamlessly across the client-side architecture.
+                                            </p>
+                                            <div className="flex flex-wrap gap-2 mt-4">
+                                                {["Redux", "REST APIs", "React Query"].map((tech, i) => (
+                                                    <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Role 4 */}
+                                    <div className="relative group">
+                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
+                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
+                                        
+                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
+                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                <h4 className="font-medium text-foreground text-lg">UI Optimization & Architecture</h4>
+                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 4</span>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Refactored anti-patterns and optimized UI rendering pipelines. Established a scalable, component-based frontend architecture ensuring maintainability and high performance.
+                                            </p>
+                                            <div className="flex flex-wrap gap-2 mt-4">
+                                                {["Performance", "Architecture", "Refactoring"].map((tech, i) => (
+                                                    <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Company 2 Header */}
+                                <div className="flex items-center gap-4 mb-8 mt-16">
+                                    <div className="w-16 h-16 rounded-2xl border border-dotted border-foreground/40 bg-muted/10 flex items-center justify-center text-xl font-mono shadow-sm text-foreground">FL</div>
+                                    <div>
+                                        <h3 className="font-medium text-foreground text-xl">Freelance Developer</h3>
+                                        <p className="text-sm text-muted-foreground font-mono mt-1">Full-stack Engineering • Global</p>
+                                    </div>
+                                </div>
+
+                                {/* Tree Branch Timeline */}
+                                <div className="ml-4 md:ml-8 border-l-2 border-border/50 pl-6 md:pl-8 pb-4 relative space-y-8 md:space-y-12">
+                                    {/* Role 1 */}
+                                    <div className="relative group">
+                                        {/* Connector Line & Dot */}
+                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-foreground/50 transition-colors"></div>
+                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-foreground group-hover:bg-foreground/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--foreground)]"></div>
+                                        
+                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-foreground/40 transition-colors">
+                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                <h4 className="font-medium text-foreground text-lg">Full-stack Web Applications</h4>
+                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">2023 - Present</span>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Built custom web applications for various international clients. Handled end-to-end development, from initial architecture and UI/UX design to backend implementation and deployment.
+                                            </p>
+                                            <div className="flex flex-wrap gap-2 mt-4">
+                                                {["Next.js", "Node.js", "PostgreSQL", "Vercel"].map((tech, i) => (
+                                                    <span key={i} className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">{tech}</span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Role 2 */}
+                                    <div className="relative group">
+                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-foreground/50 transition-colors"></div>
+                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-foreground group-hover:bg-foreground/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--foreground)]"></div>
+                                        
+                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-foreground/40 transition-colors">
+                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                <h4 className="font-medium text-foreground text-lg">Landing Pages & Portfolios</h4>
+                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">2022 - 2023</span>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Designed and developed highly performant landing pages and portfolios. Focused on animations, SEO optimization, and responsive design to ensure maximum conversion rates.
+                                            </p>
+                                            <div className="flex flex-wrap gap-2 mt-4">
+                                                {["React", "Tailwind CSS", "Framer Motion", "SEO"].map((tech, i) => (
+                                                    <span key={i} className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">{tech}</span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </section>
