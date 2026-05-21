@@ -1,15 +1,12 @@
 "use client"
 
 import Image from "next/image";
-import { motion, AnimatePresence } from 'motion/react'
-import { FileCode, Mail, MailOpen, ArrowUpRight, Palette } from "lucide-react";
+import { Mail, ArrowUpRight, Palette } from "lucide-react";
 import { GitHubCalendar } from "react-github-calendar";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import ThemeToggle from "./theme-toggle";
 import { RotateWords } from "./rotate-words";
 import { Marquee } from "./marquee";
-import Header from "./Header";
 
 let isAppHydrated = false;
 
@@ -136,14 +133,6 @@ export default function HeroWithScale() {
                                     )}
                                 </div>
                             </section>
-
-                            {/* Row 2: Social Connectivity Row */}
-                            {/* <div className="w-full p-4 md:px-8 md:py-6 flex flex-wrap items-center gap-3 md:gap-5 bg-dot/[0.05]">
-                            <SocialIcon src="/Github.jpg" alt="Github" />
-                            <SocialIcon src="/LinkedIn.png" alt="LinkedIn" />
-                            <SocialIcon src="/X.jpg" alt="X" />
-                            <MailButton email="yash.anand167@gmail.com" />
-                        </div> */}
                         </section>
 
                         <section className="relative w-full">
@@ -592,6 +581,7 @@ const techStack1 = [
     { name: "Next.js" },
     { name: "TypeScript" },
     { name: "Node.js" },
+    {name: "React Native"},
     { name: "Tailwind CSS" },
     { name: "Framer Motion" },
     { name: "PostgreSQL" },
