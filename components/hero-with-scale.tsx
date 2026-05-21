@@ -106,7 +106,7 @@ export default function HeroWithScale() {
                                         {[
                                             { title: "Product-First Thinking", desc: "Crafting interfaces that balance business goals with user delight." },
                                             { title: "Modern Tech Stack", desc: "Next.js, TypeScript, and Framer Motion for fluid experiences." },
-                                            { title: "Open Source", desc: "Contributing to the ecosystem through tools like Inertia-UI." },
+                                            { title: "Open Source", desc: "Contributing to the ecosystem" },
                                             { title: "Design Systems", desc: "Building scalable, maintainable component libraries from scratch." }
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex gap-3">
@@ -597,6 +597,8 @@ const techStack2 = [
     { name: "Three.js" },
     { name: "GraphQL" },
     { name: "Supabase" },
+    { name: "shadcn" },
+    { name: "Jest" }
 ];
 
 
