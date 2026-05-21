@@ -176,8 +176,21 @@ export default function Home() {
 
                                     <div className="relative z-10 flex flex-col md:flex-row">
 
+                                        {/* Image */}
+                                        <div className="md:w-[40%] relative bg-gradient-to-br from-primary/5 to-transparent overflow-hidden">
+
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                                            <img
+                                                src="/Landing Page.png"
+                                                alt="Inertia UI Preview"
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                            />
+
+                                            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                        </div>
+
                                         {/* Content */}
-                                        <div className="flex-1 p-6 md:p-8 flex flex-col justify-center">
+                                        <div className="flex-1 p-6 md:p-8 flex flex-col justify-center border-t md:border-l md:border-t-0 border-dotted border-foreground/20">
                                             <div className="flex items-center gap-3 mb-3 flex-wrap">
                                                 <h3 className="text-lg md:text-xl font-medium text-foreground">
                                                     Inertia-UI
@@ -202,19 +215,6 @@ export default function Home() {
 
                                                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
                                             </a>
-                                        </div>
-
-                                        {/* Image */}
-                                        <div className="md:w-[40%] border-t md:border-l md:border-t-0 border-dotted border-foreground/20 relative bg-gradient-to-br from-primary/5 to-transparent overflow-hidden">
-
-                                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                                            <img
-                                                src="/Landing Page.png"
-                                                alt="Inertia UI Preview"
-                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                            />
-
-                                            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                         </div>
                                     </div>
                                 </div>
