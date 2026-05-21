@@ -281,6 +281,6 @@ export default function Home() {
 
 const VerticalStripes = () => {
     return (
-        <div className="relative z-10 min-h-full w-14 border-l border-r border-border shrink-0 bg-background" />
+        <div className="relative z-10 min-h-full w-8 md:w-14 border-l border-r border-border shrink-0 bg-background" />
     )
 }

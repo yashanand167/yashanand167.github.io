@@ -12,14 +12,14 @@ export default function BlogsPage() {
             <Header />
             <div className="max-w-5xl mx-auto w-full min-h-screen flex border-x border-border">
                 {/* Left Stipe */}
-                <div className="w-14 md:w-14 bg-background border-r border-border shrink-0" />
+                <div className="w-8 md:w-14 bg-background border-r border-border shrink-0" />
 
                 <main className="flex-1 min-w-0">
                     <div className="p-4 md:px-8 md:py-6">
                         <p className="text-sm text-neutral-500">
                             My Work Process
-                        </p>                       
-                         <p className="mt-2 text-lg md:text-lg">Explore product design, development and intersection of both</p>
+                        </p>
+                        <p className="mt-2 text-lg md:text-lg">Explore product design, development and intersection of both</p>
                     </div>
 
                     <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal">
@@ -37,11 +37,11 @@ export default function BlogsPage() {
                                     className="group block relative"
                                 >
                                     <div className="flex flex-col md:flex-row border border-border rounded-2xl overflow-hidden bg-muted/5 hover:bg-muted/10 transition-all hover:border-primary/50">
-                                        
+
                                         {/* Image Container */}
                                         <div className="w-full md:w-[40%] aspect-[16/10] md:aspect-[16/10] relative overflow-hidden shrink-0">
-                                            <Image 
-                                                src={post.image} 
+                                            <Image
+                                                src={post.image}
                                                 alt={post.title}
                                                 fill
                                                 sizes="(max-width: 768px) 100vw, 40vw"
@@ -58,11 +58,11 @@ export default function BlogsPage() {
                                                         {post.category} <span className="text-primary">•</span> {post.date}
                                                     </span>
                                                 </div>
-                                                
+
                                                 <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-foreground group-hover:text-primary transition-colors mb-4">
                                                     {post.title}
                                                 </h2>
-                                                
+
                                                 <p className="text-sm md:text-base text-muted-foreground line-clamp-2 leading-relaxed">
                                                     {post.excerpt}
                                                 </p>
@@ -95,10 +95,10 @@ export default function BlogsPage() {
                         <div className="h-px bg-gradient-to-l from-transparent to-border flex-1 max-w-[100px]" />
                     </div>
                 </main>
-                
+
 
                 {/* Right Stripe */}
-                <div className="w-14 md:w-14 bg-background border-l border-border shrink-0" />
+                <div className="w-8 md:w-14 bg-background border-l border-border shrink-0" />
             </div>
         </main>
     );

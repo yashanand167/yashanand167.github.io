@@ -52,7 +52,7 @@ export default function Header() {
         <header className="sticky top-0 z-50 w-full h-14 border-b border-border bg-background/80 backdrop-blur-md">
             <div className="max-w-5xl mx-auto w-full h-full relative flex">
                 {/* Left Crossing Box */}
-                <div className="w-14 bg-background bg-stripe border-l border-r border-border h-full shrink-0" />
+                <div className="w-8 md:w-14 bg-background bg-stripe border-l border-r border-border h-full shrink-0" />
 
                 <div className="flex flex-1 items-center justify-between px-4 h-full">
                     <nav className="flex items-center gap-4 md:gap-8 h-full">
@@ -109,7 +109,7 @@ export default function Header() {
                 </div>
 
                 {/* Right Crossing Box */}
-                <div className="w-14 bg-background bg-stripe border-l border-r border-border h-full shrink-0" />
+                <div className="w-8 md:w-14 bg-background bg-stripe border-l border-r border-border h-full shrink-0" />
             </div>
         </header>
     );

@@ -4,7 +4,7 @@ export default function DesignJourney() {
 
     return (
 
-        <section className="relative mx-auto max-w-5xl px-8 md:px-16 py-8 md:py-16">
+        <section className="relative mx-auto max-w-5xl px-4 md:px-16 py-8 md:py-16">
 
             <div className="mb-12 md:mb-16">
                 <p className="text-sm text-neutral-500">
@@ -31,7 +31,7 @@ export default function DesignJourney() {
 
                     className="
             absolute
-            left-6 md:left-1/2
+            left-3 md:left-1/2
             top-0
             w-px
             -translate-x-1/2
@@ -85,7 +85,7 @@ export default function DesignJourney() {
 
                                 <div
                                     className={`
-                    w-[calc(100%-4rem)] md:w-[45%]
+                    w-[calc(100%-2rem)] md:w-[45%]
                     rounded-3xl
                     border border-border
                     bg-muted/50
@@ -116,7 +116,7 @@ export default function DesignJourney() {
 
                                     className="
                     absolute
-                    left-6 md:left-1/2
+                    left-3 md:left-1/2
                     h-4
                     w-4
                     -translate-x-1/2

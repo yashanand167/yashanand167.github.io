@@ -13,24 +13,17 @@ export default function ThemeToggle() {
     setTheme(resolvedTheme === "dark" ? "light" : "dark")
   }
 
-  const handleThemeToggleClick = () => {
-    if (!document.startViewTransition) switchTheme()
-    else document.startViewTransition(switchTheme)
-  }
-
   return (
-    <div className="flex gap-2">
-      {/* <ThemeToggleEffectSelector /> */}
-
-      <Button
-        variant="outline"
-        size="icon"
-        aria-label="Theme Toggle"
-        onClick={handleThemeToggleClick}
-      >
-        <MoonIcon className="hidden [html.dark_&]:block" />
-        <SunMediumIcon className="hidden [html.light_&]:block" />
-      </Button>
-    </div>
+    <Button
+      variant="outline"
+      size="icon"
+      aria-label="Theme Toggle"
+      onClick={switchTheme}
+      className="relative rounded-full border-border bg-background hover:bg-muted/50"
+    >
+      <SunMediumIcon className="h-4 w-4 rotate-0 scale-100 transition-all duration-300 dark:-rotate-90 dark:scale-0" />
+      <MoonIcon className="absolute h-4 w-4 rotate-90 scale-0 transition-all duration-300 dark:rotate-0 dark:scale-100" />
+      <span className="sr-only">Toggle theme</span>
+    </Button>
   )
 }
