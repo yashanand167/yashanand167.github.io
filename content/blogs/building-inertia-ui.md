@@ -26,31 +26,7 @@ One of the biggest hurdles is ensuring that complex animations don't impact the 
 
 We are solving this by leveraging Framer Motion's hardware-accelerated animations and ensuring that layout shifts are strictly minimized. 
 
-```tsx
-// Example of a custom animated component with optimized variants
-import { motion } from "framer-motion";
 
-const buttonVariants = {
-  initial: { scale: 1 },
-  hover: { scale: 1.05 },
-  tap: { scale: 0.95 }
-};
-
-export const InertiaButton = ({ children, ...props }) => {
-  return (
-    <motion.button 
-      variants={buttonVariants}
-      initial="initial"
-      whileHover="hover"
-      whileTap="tap"
-      className="bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium"
-      {...props}
-    >
-      {children}
-    </motion.button>
-  );
-};
-```
 
 ## Embracing OKLCH Colors
 
