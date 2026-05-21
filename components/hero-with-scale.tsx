@@ -69,12 +69,12 @@ export default function HeroWithScale() {
                                 <div className="p-4 md:p-8 flex items-center justify-center border-r border-border shrink-0 bg-muted/5">
                                     <div className="w-16 h-16 md:w-32 md:h-32 rounded-full border border-border overflow-hidden shadow-sm bg-background">
                                         <Image
-                                            src="/Image.jpg"
+                                            src="/image.png"
                                             alt="Yash Anand"
                                             width={128}
                                             height={128}
                                             priority
-                                            className="object-cover w-full h-full"
+                                            className="object-cover object-[center_25%] w-full h-full"
                                         />
                                     </div>
                                 </div>
