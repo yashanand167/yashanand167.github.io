@@ -167,7 +167,7 @@ export default function HeroWithScale() {
                                 <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-8">
                                     Work Experience so far
                                 </h2>
-                                
+
                                 {/* Company Header */}
                                 <div className="flex items-center gap-4 mb-8">
                                     <a href="https://dseide.com" target="_blank" rel="noopener noreferrer" className="w-16 h-16 rounded-2xl border border-dotted border-primary/40 bg-primary/5 flex items-center justify-center overflow-hidden shadow-sm relative group shrink-0">
@@ -188,7 +188,7 @@ export default function HeroWithScale() {
                                         {/* Connector Line & Dot */}
                                         <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
                                         <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
-                                        
+
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
                                                 <h4 className="font-medium text-foreground text-lg">Event Module Design</h4>
@@ -209,7 +209,7 @@ export default function HeroWithScale() {
                                     <div className="relative group">
                                         <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
                                         <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
-                                        
+
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
                                                 <h4 className="font-medium text-foreground text-lg">UI Refinement & API Testing</h4>
@@ -230,7 +230,7 @@ export default function HeroWithScale() {
                                     <div className="relative group">
                                         <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
                                         <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
-                                        
+
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
                                                 <h4 className="font-medium text-foreground text-lg">Website Design & Dashboard</h4>
@@ -251,7 +251,7 @@ export default function HeroWithScale() {
                                     <div className="relative group">
                                         <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
                                         <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
-                                        
+
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
                                                 <h4 className="font-medium text-foreground text-lg">Frontend Development</h4>
@@ -272,7 +272,7 @@ export default function HeroWithScale() {
                                     <div className="relative group">
                                         <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
                                         <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
-                                        
+
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
                                                 <h4 className="font-medium text-foreground text-lg">Product Design for Mobile App</h4>
@@ -291,13 +291,32 @@ export default function HeroWithScale() {
                                 </div>
 
                                 {/* Company 2 Header */}
-                                <div className="flex items-center gap-4 mb-8 mt-16">
-                                    <div className="w-16 h-16 rounded-2xl border border-dotted border-foreground/40 bg-muted/10 flex items-center justify-center text-xl font-mono shadow-sm text-foreground">
-                                        <Palette className="w-8 h-8 opacity-80" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-medium text-foreground text-xl">Freelance</h3>
-                                        <p className="text-sm text-muted-foreground font-mono mt-1">Product Design • Global</p>
+                                <div
+                                    onClick={() =>
+                                        window.open(
+                                            "https://www.figma.com/design/IjCiARPScq2kN5yHSVdU8o/AI-powered-Nutrition-App?node-id=0-1&p=f&t=n0I38EAIBKzSnqlF-0",
+                                            "_blank",
+                                            "noopener,noreferrer"
+                                        )
+                                    }
+                                    className="group inline-block cursor-pointer"
+                                >
+                                    <div className="flex items-center gap-4 mb-8 mt-16 transition-all">
+
+                                        <div className="w-16 h-16 rounded-2xl border border-dotted border-foreground/40 bg-muted/10 flex items-center justify-center text-xl font-mono shadow-sm text-foreground group-hover:border-primary/50 group-hover:bg-primary/5 transition-all">
+                                            <Palette className="w-8 h-8 opacity-80 group-hover:scale-110 transition-transform" />
+                                        </div>
+
+                                        <div>
+                                            <h3 className="font-medium text-foreground text-xl group-hover:text-primary transition-colors">
+                                                Freelance
+                                            </h3>
+
+                                            <p className="text-sm text-muted-foreground font-mono mt-1">
+                                                Product Design • Global
+                                            </p>
+                                        </div>
+
                                     </div>
                                 </div>
 
@@ -308,7 +327,7 @@ export default function HeroWithScale() {
                                         {/* Connector Line & Dot */}
                                         <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-foreground/50 transition-colors"></div>
                                         <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-foreground group-hover:bg-foreground/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--foreground)]"></div>
-                                        
+
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-foreground/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
                                                 <h4 className="font-medium text-foreground text-lg">AI Nutrition App</h4>
@@ -329,7 +348,7 @@ export default function HeroWithScale() {
                                     <div className="relative group">
                                         <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-foreground/50 transition-colors"></div>
                                         <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-foreground group-hover:bg-foreground/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--foreground)]"></div>
-                                        
+
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-foreground/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
                                                 <h4 className="font-medium text-foreground text-lg">UI Design & Dev Handoff</h4>
