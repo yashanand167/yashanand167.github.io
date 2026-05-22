@@ -495,21 +495,6 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                         </p>
                                     </div>
 
-                                    {/* Card 5: Alex Rivera (Wide) */}
-                                    <div className="md:col-span-4 border border-dotted border-foreground/20 p-6 flex items-center justify-between bg-muted/5 hover:bg-muted/10 transition-all duration-300 group overflow-hidden relative">
-                                        <div className="flex items-center gap-6 relative z-10">
-                                            <div className="w-10 h-10 rounded-full border border-dotted border-foreground/20 bg-background flex items-center justify-center text-xs font-mono group-hover:bg-primary/5 transition-colors">AR</div>
-                                            <div>
-                                                <p className="text-sm md:text-base text-muted-foreground italic max-w-2xl">
-                                                    "Yash is one of those rare developers who truly cares about the end-to-end user journey. Working with him was a highlight of the project."
-                                                </p>
-                                                <div className="flex items-center gap-2 mt-2">
-                                                    <h3 className="font-medium text-foreground text-xs uppercase tracking-wider">Alex Rivera</h3>
-                                                    <span className="text-[10px] text-muted-foreground">• Lead Designer @ Nova</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </section>

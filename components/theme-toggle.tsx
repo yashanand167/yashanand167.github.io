@@ -4,13 +4,20 @@ import { MoonIcon, SunMediumIcon } from "lucide-react"
 import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
-
+import { useClickSound } from "@/hooks/soundcn/use-click-sound"
 
 export default function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme()
+  const [click] = useClickSound()
 
   const switchTheme = () => {
     setTheme(resolvedTheme === "dark" ? "light" : "dark")
+  }
+
+  const handleThemeToggleClick = () => {
+    click()
+    if (!document.startViewTransition) switchTheme()
+    else document.startViewTransition(switchTheme)
   }
 
   return (
@@ -18,11 +25,11 @@ export default function ThemeToggle() {
       variant="outline"
       size="icon"
       aria-label="Theme Toggle"
-      onClick={switchTheme}
+      onClick={handleThemeToggleClick}
       className="relative rounded-full border-border bg-background hover:bg-muted/50"
     >
-      <SunMediumIcon className="h-4 w-4 rotate-0 scale-100 transition-all duration-300 dark:-rotate-90 dark:scale-0" />
-      <MoonIcon className="absolute h-4 w-4 rotate-90 scale-0 transition-all duration-300 dark:rotate-0 dark:scale-100" />
+      <MoonIcon className="hidden h-4 w-4 [html.dark_&]:block" />
+      <SunMediumIcon className="hidden h-4 w-4 [html.light_&]:block" />
       <span className="sr-only">Toggle theme</span>
     </Button>
   )
