@@ -380,6 +380,8 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                             </div>
                         </section>
 
+                        {/* "People who worked with me" Section Commented Out */}
+                        {false && (
                         <section className="relative w-full overflow-hidden">
                             <div className="p-4 md:p-8">
                                 <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-8">
@@ -498,6 +500,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                 </div>
                             </div>
                         </section>
+                        )}
 
                         <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal">
                             <div className="absolute inset-0 bg-gradient-to-b from-background to-transparent pointer-events-none" />
