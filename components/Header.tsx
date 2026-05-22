@@ -119,7 +119,7 @@ const ResumeButton = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <Link href="https://drive.google.com/file/d/1i146hCVzDQ8t-v4eEHuYI9qPbhrm9npc/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+        <Link href="https://drive.google.com/file/d/1i146hCVzDQ8t-v4eEHuYI9qPbhrm9npc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <motion.div
                 onHoverStart={() => setIsHovered(true)}
                 onHoverEnd={() => setIsHovered(false)}
