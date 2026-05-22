@@ -1,14 +1,15 @@
-'use client'
-
 import Header from "@/components/Header";
 import HeroWithScale from "@/components/hero-with-scale";
 import ThemeToggle from "@/components/theme-toggle";
+import { getCachedContributions } from "@/lib/get-cached-contributions";
 
 export default function Home() {
+  const contributionsPromise = getCachedContributions("yashanand167");
+
   return (
     <main className="min-h-screen relative"> 
     <Header />
-      <HeroWithScale />
+      <HeroWithScale contributions={contributionsPromise} />
       {/* <div className="fixed top-4 right-4 z-50">
         <ThemeToggle />
       </div> */}

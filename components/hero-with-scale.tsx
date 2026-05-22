@@ -1,17 +1,44 @@
 "use client"
 
 import Image from "next/image";
-import { Mail, ArrowUpRight, Palette } from "lucide-react";
-import { GitHubCalendar } from "react-github-calendar";
-import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
+import { Mail, ArrowUpRight, Palette, ChevronDown } from "lucide-react";
+import { Suspense, useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { GitHubContributions, GitHubContributionsFallback } from "@/components/github-contributions";
+import type { Activity } from "@/components/contribution-graph";
 import { RotateWords } from "./rotate-words";
 import { Marquee } from "./marquee";
 
 let isAppHydrated = false;
 
-export default function HeroWithScale() {
-    const { resolvedTheme } = useTheme();
+const ExpandableExperience = ({ children }: { children: React.ReactNode }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+    return (
+        <div className="flex flex-col w-full relative">
+            <button 
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="ml-4 md:ml-8 mb-4 w-fit text-xs font-mono text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors bg-muted/30 px-3 py-1.5 rounded-full border border-border/50 hover:border-border"
+            >
+                {isExpanded ? "Read Less" : "Read More"}
+                <ChevronDown className={`w-3 h-3 transition-transform ${isExpanded ? "rotate-180" : ""}`} />
+            </button>
+            <AnimatePresence>
+                {isExpanded && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden"
+                    >
+                        {children}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+};
+
+export default function HeroWithScale({ contributions }: { contributions?: Promise<Activity[]> }) {
     const [mounted, setMounted] = useState(isAppHydrated);
 
     useEffect(() => {
@@ -20,11 +47,6 @@ export default function HeroWithScale() {
             setMounted(true);
         }
     }, [mounted]);
-
-    const calendarTheme = {
-        light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
-        dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
-    };
 
     return (
         <div className="w-full flex flex-col min-h-screen">
@@ -45,7 +67,7 @@ export default function HeroWithScale() {
                                         alt="Logo"
                                         fill
                                         sizes="(max-width: 768px) 160px, 320px"
-                                        priority
+                                        loading="lazy"
                                         className="object-contain drop-shadow-sm transition-all dark:hidden"
                                     />
                                     <Image
@@ -53,7 +75,7 @@ export default function HeroWithScale() {
                                         alt="Logo"
                                         fill
                                         sizes="(max-width: 768px) 160px, 320px"
-                                        priority
+                                        loading="lazy"
                                         className="object-contain drop-shadow-sm transition-all hidden dark:block"
                                     />
                                 </div>
@@ -73,7 +95,7 @@ export default function HeroWithScale() {
                                             alt="Yash Anand"
                                             width={128}
                                             height={128}
-                                            priority
+                                            loading="lazy"
                                             className="object-cover object-[center_25%] w-full h-full"
                                         />
                                     </div>
@@ -120,16 +142,13 @@ export default function HeroWithScale() {
                                     </ul>
                                 </div>
                                 <div className="flex justify-center mt-10 overflow-hidden ">
-                                    {mounted && (
-                                        <GitHubCalendar
-                                            username="yashanand167"
-                                            year={2026}
-                                            theme={calendarTheme}
-                                            colorScheme={resolvedTheme === 'dark' ? 'dark' : 'light'}
-                                            fontSize={12}
-                                            blockSize={11}
-                                            blockMargin={4}
-                                        />
+                                    {mounted && contributions && (
+                                        <Suspense fallback={<GitHubContributionsFallback />}>
+                                            <GitHubContributions
+                                                contributions={contributions}
+                                                githubProfileUrl="https://github.com/yashanand167"
+                                            />
+                                        </Suspense>
                                     )}
                                 </div>
                             </section>
@@ -160,7 +179,7 @@ export default function HeroWithScale() {
                                 {/* Company Header */}
                                 <div className="flex items-center gap-4 mb-8">
                                     <a href="https://dseide.com" target="_blank" rel="noopener noreferrer" className="w-16 h-16 rounded-2xl border border-dotted border-primary/40 bg-primary/5 flex items-center justify-center overflow-hidden shadow-sm relative group shrink-0">
-                                        <Image src="/images.png" alt="Dseide Healthcare Network" fill className="object-cover transition-transform group-hover:scale-110" />
+                                        <Image src="/images.png" alt="Dseide Healthcare Network" fill loading="lazy" sizes="64px" className="object-cover transition-transform group-hover:scale-110" />
                                     </a>
                                     <div>
                                         <a href="https://dseide.com" target="_blank" rel="noopener noreferrer" className="hover:underline transition-colors">
@@ -171,6 +190,7 @@ export default function HeroWithScale() {
                                 </div>
 
                                 {/* Tree Branch Timeline */}
+                                <ExpandableExperience>
                                 <div className="ml-4 md:ml-8 border-l-2 border-border/50 pl-6 md:pl-8 pb-4 relative space-y-8 md:space-y-12">
                                     {/* Role 1 */}
                                     <div className="relative group">
@@ -278,6 +298,7 @@ export default function HeroWithScale() {
                                         </div>
                                     </div>
                                 </div>
+                                </ExpandableExperience>
 
                                 {/* Company 2 Header */}
                                 <div
@@ -310,6 +331,7 @@ export default function HeroWithScale() {
                                 </div>
 
                                 {/* Tree Branch Timeline */}
+                                <ExpandableExperience>
                                 <div className="ml-4 md:ml-8 border-l-2 border-border/50 pl-6 md:pl-8 pb-4 relative space-y-8 md:space-y-12">
                                     {/* Role 1 */}
                                     <div className="relative group">
@@ -354,6 +376,7 @@ export default function HeroWithScale() {
                                         </div>
                                     </div>
                                 </div>
+                                </ExpandableExperience>
                             </div>
                         </section>
 

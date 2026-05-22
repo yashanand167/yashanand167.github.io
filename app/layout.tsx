@@ -21,15 +21,13 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: "About Me",
+    default: "Yash Anand",
     template: "%s",
   },
   description: "A personal blog about technology, life, and ideas.",
-  icons: {
-    icon: "/FavIcon.PNG",
-    apple: "/FavIcon.PNG",
-  }
 }
+
+import { TooltipProvider } from "@/components/ui/tooltip"
 
 export default function RootLayout({
   children,
@@ -40,7 +38,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={cn("font-sans", geist.variable, instrumentSerif.variable)}>
       <body className={`${jetbrainsMono.variable} ${geist.variable} ${instrumentSerif.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          {children}
+          <TooltipProvider>
+            {children}
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

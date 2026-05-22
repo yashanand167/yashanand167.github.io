@@ -78,7 +78,7 @@ export default function Header() {
                                             alt="Logo"
                                             fill
                                             sizes="32px"
-                                            priority
+                                            loading="lazy"
                                             className="object-contain drop-shadow-sm transition-all dark:hidden"
                                         />
                                         <Image
@@ -86,7 +86,7 @@ export default function Header() {
                                             alt="Logo"
                                             fill
                                             sizes="32px"
-                                            priority
+                                            loading="lazy"
                                             className="object-contain drop-shadow-sm transition-all hidden dark:block"
                                         />
                                     </div>
@@ -119,24 +119,26 @@ const ResumeButton = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <motion.button
-            onHoverStart={() => setIsHovered(true)}
-            onHoverEnd={() => setIsHovered(false)}
-            className="flex items-center gap-2 px-3 md:px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-[10px] md:text-sm font-medium transition-all hover:ring-2 hover:ring-primary/20"
-        >
-            <span>Resume</span>
-            <AnimatePresence mode="popLayout">
-                {isHovered && (
-                    <motion.span
-                        initial={{ width: 0, opacity: 0, scale: 0.5 }}
-                        animate={{ width: "auto", opacity: 1, scale: 1 }}
-                        exit={{ width: 0, opacity: 0, scale: 0.5 }}
-                        className="overflow-hidden"
-                    >
-                        <FileCode className="w-3 h-3 md:w-4 md:h-4" />
-                    </motion.span>
-                )}
-            </AnimatePresence>
-        </motion.button>
+        <Link href="https://drive.google.com/file/d/1i146hCVzDQ8t-v4eEHuYI9qPbhrm9npc/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+            <motion.div
+                onHoverStart={() => setIsHovered(true)}
+                onHoverEnd={() => setIsHovered(false)}
+                className="flex items-center gap-2 px-3 md:px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-[10px] md:text-sm font-medium transition-all hover:ring-2 hover:ring-primary/20 cursor-pointer"
+            >
+                <span>Resume</span>
+                <AnimatePresence mode="popLayout">
+                    {isHovered && (
+                        <motion.span
+                            initial={{ width: 0, opacity: 0, scale: 0.5 }}
+                            animate={{ width: "auto", opacity: 1, scale: 1 }}
+                            exit={{ width: 0, opacity: 0, scale: 0.5 }}
+                            className="overflow-hidden"
+                        >
+                            <FileCode className="w-3 h-3 md:w-4 md:h-4" />
+                        </motion.span>
+                    )}
+                </AnimatePresence>
+            </motion.div>
+        </Link>
     );
 };

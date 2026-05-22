@@ -66,12 +66,13 @@ export default function Home() {
                                     <div className="group relative flex flex-col rounded-2xl border border-dotted border-foreground/20 bg-muted/5 overflow-hidden hover:border-foreground/30 transition-all shadow-sm">
                                         {/* Image Container */}
                                         <div className="aspect-video w-full bg-muted/20 relative overflow-hidden border-b border-dotted border-foreground/20 flex items-center justify-center bg-gradient-to-br from-primary/5 to-muted">
-                                            {/* NOTE: Replace the src below with your actual attached image path */}
-                                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                                            <img
+                                            <Image
                                                 src="/askNow.png"
                                                 alt="askNow Project Preview"
-                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                                                fill
+                                                loading="lazy"
+                                                sizes="(max-width: 768px) 100vw, 50vw"
+                                                className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
                                                 onError={(e) => {
                                                     // Fallback if image fails to load or isn't set properly
                                                     e.currentTarget.style.display = 'none';
