@@ -15,7 +15,7 @@ const ExpandableExperience = ({ children }: { children: React.ReactNode }) => {
     const [isExpanded, setIsExpanded] = useState(false);
     return (
         <div className="flex flex-col w-full relative">
-            <button 
+            <button
                 onClick={() => setIsExpanded(!isExpanded)}
                 className="ml-4 md:ml-8 mb-4 w-fit text-xs font-mono text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors bg-muted/30 px-3 py-1.5 rounded-full border border-border/50 hover:border-border"
             >
@@ -191,113 +191,113 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
 
                                 {/* Tree Branch Timeline */}
                                 <ExpandableExperience>
-                                <div className="ml-4 md:ml-8 border-l-2 border-border/50 pl-6 md:pl-8 pb-4 relative space-y-8 md:space-y-12">
-                                    {/* Role 1 */}
-                                    <div className="relative group">
-                                        {/* Connector Line & Dot */}
-                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
-                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
+                                    <div className="ml-4 md:ml-8 border-l-2 border-border/50 pl-6 md:pl-8 pb-4 relative space-y-8 md:space-y-12">
+                                        {/* Role 1 */}
+                                        <div className="relative group">
+                                            {/* Connector Line & Dot */}
+                                            <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
+                                            <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
 
-                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
-                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">Event Module Design</h4>
-                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Mar 2026 - May 2026</span>
+                                            <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
+                                                <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                    <h4 className="font-medium text-foreground text-lg">Event Module Design</h4>
+                                                    <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Mar 2026 - May 2026</span>
+                                                </div>
+                                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                                    Designed the event module for the next version within the existing platform architecture.
+                                                </p>
+                                                <div className="flex flex-wrap gap-2 mt-4">
+                                                    {["Product Design", "Figma", "Feature Extension"].map((tech, i) => (
+                                                        <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
+                                                    ))}
+                                                </div>
                                             </div>
-                                            <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Designed the event module for the next version within the existing platform architecture.
-                                            </p>
-                                            <div className="flex flex-wrap gap-2 mt-4">
-                                                {["Product Design", "Figma", "Feature Extension"].map((tech, i) => (
-                                                    <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
-                                                ))}
+                                        </div>
+
+                                        {/* Role 2 */}
+                                        <div className="relative group">
+                                            <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
+                                            <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
+
+                                            <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
+                                                <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                    <h4 className="font-medium text-foreground text-lg">UI Refinement & API Testing</h4>
+                                                    <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Jan 2026 - Feb 2026</span>
+                                                </div>
+                                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                                    Refined UI components in the mobile app and wrote API test files using Jest.
+                                                </p>
+                                                <div className="flex flex-wrap gap-2 mt-4">
+                                                    {["UI/UX", "Jest", "API Testing"].map((tech, i) => (
+                                                        <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Role 3 */}
+                                        <div className="relative group">
+                                            <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
+                                            <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
+
+                                            <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
+                                                <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                    <h4 className="font-medium text-foreground text-lg">Website Design & Dashboard</h4>
+                                                    <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Nov 2025 - Dec 2025</span>
+                                                </div>
+                                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                                    Designed the Framer website leveraging Figma and Framer, and built the platform dashboard using React and Axios for data fetching.
+                                                </p>
+                                                <div className="flex flex-wrap gap-2 mt-4">
+                                                    {["Framer", "Figma", "React", "Axios"].map((tech, i) => (
+                                                        <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Role 4 */}
+                                        <div className="relative group">
+                                            <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
+                                            <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
+
+                                            <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
+                                                <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                    <h4 className="font-medium text-foreground text-lg">Frontend Development</h4>
+                                                    <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Oct 2025 - Nov 2025</span>
+                                                </div>
+                                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                                    Developed the frontend of the mobile application using React Native (Expo).
+                                                </p>
+                                                <div className="flex flex-wrap gap-2 mt-4">
+                                                    {["React Native", "Expo", "Frontend", "Zustand", "Tanstack Query"].map((tech, i) => (
+                                                        <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Role 5 */}
+                                        <div className="relative group">
+                                            <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
+                                            <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
+
+                                            <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
+                                                <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                    <h4 className="font-medium text-foreground text-lg">Product Design for Mobile App</h4>
+                                                    <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Aug 2025 - Oct 2025</span>
+                                                </div>
+                                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                                    Designed the core product experience for the mobile application from scratch.
+                                                </p>
+                                                <div className="flex flex-wrap gap-2 mt-4">
+                                                    {["Figma", "UI/UX", "Mobile Design", "User Research", "Competitor Analysis"].map((tech, i) => (
+                                                        <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
+                                                    ))}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    {/* Role 2 */}
-                                    <div className="relative group">
-                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
-                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
-
-                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
-                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">UI Refinement & API Testing</h4>
-                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Jan 2026 - Feb 2026</span>
-                                            </div>
-                                            <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Refined UI components in the mobile app and wrote API test files using Jest.
-                                            </p>
-                                            <div className="flex flex-wrap gap-2 mt-4">
-                                                {["UI/UX", "Jest", "API Testing"].map((tech, i) => (
-                                                    <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Role 3 */}
-                                    <div className="relative group">
-                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
-                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
-
-                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
-                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">Website Design & Dashboard</h4>
-                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Nov 2025 - Dec 2025</span>
-                                            </div>
-                                            <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Designed the Framer website leveraging Figma and Framer, and built the platform dashboard using React and Axios for data fetching.
-                                            </p>
-                                            <div className="flex flex-wrap gap-2 mt-4">
-                                                {["Framer", "Figma", "React", "Axios"].map((tech, i) => (
-                                                    <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Role 4 */}
-                                    <div className="relative group">
-                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
-                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
-
-                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
-                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">Frontend Development</h4>
-                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Oct 2025 - Nov 2025</span>
-                                            </div>
-                                            <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Developed the frontend of the mobile application using React Native (Expo).
-                                            </p>
-                                            <div className="flex flex-wrap gap-2 mt-4">
-                                                {["React Native", "Expo", "Frontend", "Zustand", "Tanstack Query"].map((tech, i) => (
-                                                    <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Role 5 */}
-                                    <div className="relative group">
-                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-primary/50 transition-colors"></div>
-                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-primary group-hover:bg-primary/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--primary)]"></div>
-
-                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
-                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">Product Design for Mobile App</h4>
-                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Aug 2025 - Oct 2025</span>
-                                            </div>
-                                            <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Designed the core product experience for the mobile application from scratch.
-                                            </p>
-                                            <div className="flex flex-wrap gap-2 mt-4">
-                                                {["Figma", "UI/UX", "Mobile Design", "User Research", "Competitor Analysis"].map((tech, i) => (
-                                                    <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 </ExpandableExperience>
 
                                 {/* Company 2 Header */}
@@ -332,60 +332,59 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
 
                                 {/* Tree Branch Timeline */}
                                 <ExpandableExperience>
-                                <div className="ml-4 md:ml-8 border-l-2 border-border/50 pl-6 md:pl-8 pb-4 relative space-y-8 md:space-y-12">
-                                    {/* Role 1 */}
-                                    <div className="relative group">
-                                        {/* Connector Line & Dot */}
-                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-foreground/50 transition-colors"></div>
-                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-foreground group-hover:bg-foreground/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--foreground)]"></div>
+                                    <div className="ml-4 md:ml-8 border-l-2 border-border/50 pl-6 md:pl-8 pb-4 relative space-y-8 md:space-y-12">
+                                        {/* Role 1 */}
+                                        <div className="relative group">
+                                            {/* Connector Line & Dot */}
+                                            <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-foreground/50 transition-colors"></div>
+                                            <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-foreground group-hover:bg-foreground/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--foreground)]"></div>
 
-                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-foreground/40 transition-colors">
-                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">AI Nutrition App</h4>
-                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 1</span>
+                                            <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-foreground/40 transition-colors">
+                                                <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                    <h4 className="font-medium text-foreground text-lg">AI Nutrition App</h4>
+                                                    <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 1</span>
+                                                </div>
+                                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                                    Conducted comprehensive UX research and competitor analysis to establish the foundation and architecture of the application's design system.
+                                                </p>
+                                                <div className="flex flex-wrap gap-2 mt-4">
+                                                    {["UX Research", "Competitor Analysis", "Design System"].map((tech, i) => (
+                                                        <span key={i} className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">{tech}</span>
+                                                    ))}
+                                                </div>
                                             </div>
-                                            <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Conducted comprehensive UX research and competitor analysis to establish the foundation and architecture of the application's design system.
-                                            </p>
-                                            <div className="flex flex-wrap gap-2 mt-4">
-                                                {["UX Research", "Competitor Analysis", "Design System"].map((tech, i) => (
-                                                    <span key={i} className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">{tech}</span>
-                                                ))}
+                                        </div>
+
+                                        {/* Role 2 */}
+                                        <div className="relative group">
+                                            <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-foreground/50 transition-colors"></div>
+                                            <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-foreground group-hover:bg-foreground/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--foreground)]"></div>
+
+                                            <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-foreground/40 transition-colors">
+                                                <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                                                    <h4 className="font-medium text-foreground text-lg">UI Design & Dev Handoff</h4>
+                                                    <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 2</span>
+                                                </div>
+                                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                                    Created high-fidelity UI designs in Figma and ensured a seamless development handoff with detailed specifications.
+                                                </p>
+                                                <div className="flex flex-wrap gap-2 mt-4">
+                                                    {["UI Design", "Figma", "Dev Handoff"].map((tech, i) => (
+                                                        <span key={i} className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">{tech}</span>
+                                                    ))}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    {/* Role 2 */}
-                                    <div className="relative group">
-                                        <div className="absolute -left-6 md:-left-8 top-8 w-6 md:w-8 h-[2px] bg-border/50 group-hover:bg-foreground/50 transition-colors"></div>
-                                        <div className="absolute -left-[29px] md:-left-[37px] top-[27px] w-3 h-3 rounded-full bg-background border-2 border-border group-hover:border-foreground group-hover:bg-foreground/20 transition-all shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--foreground)]"></div>
-
-                                        <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-foreground/40 transition-colors">
-                                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">UI Design & Dev Handoff</h4>
-                                                <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Phase 2</span>
-                                            </div>
-                                            <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Created high-fidelity UI designs in Figma and ensured a seamless development handoff with detailed specifications.
-                                            </p>
-                                            <div className="flex flex-wrap gap-2 mt-4">
-                                                {["UI Design", "Figma", "Dev Handoff"].map((tech, i) => (
-                                                    <span key={i} className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">{tech}</span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 </ExpandableExperience>
                             </div>
                         </section>
 
-                        {/* "People who worked with me" Section Commented Out */}
-                        {false && (
+                        {/* "People I worked with" Section */}
                         <section className="relative w-full overflow-hidden">
                             <div className="p-4 md:p-8">
                                 <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-8">
-                                    People who worked with me
+                                    People I worked with
                                 </h2>
 
                                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">
@@ -393,10 +392,28 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                     <div className="md:col-span-2 border border-dotted border-primary/30 p-6 md:p-8 flex flex-col justify-between bg-primary/5 hover:bg-primary/10 transition-all duration-300 group relative overflow-hidden">
                                         <div className="relative z-10">
                                             <div className="flex items-center gap-4 mb-6">
-                                                <div className="w-12 h-12 rounded-full border border-dotted border-primary/30 bg-background flex items-center justify-center text-sm font-mono shadow-sm group-hover:scale-110 transition-transform text-primary">FN</div>
+                                                <div className="w-12 h-12 rounded-full border border-dotted border-primary/30 overflow-hidden relative shadow-sm group-hover:scale-110 transition-transform shrink-0">
+                                                    <Image
+                                                        src="/Nikhila.jpg"
+                                                        alt="Nikhila CR"
+                                                        fill
+                                                        sizes="48px"
+                                                        className="object-cover"
+                                                    />
+                                                </div>
                                                 <div>
-                                                    <h3 className="font-medium text-foreground text-lg">Founder</h3>
-                                                    <p className="text-xs text-primary font-mono uppercase tracking-wider">CEO & Founder</p>
+                                                    <h3 className="font-medium text-foreground text-lg">
+                                                        <a
+                                                            href="https://www.linkedin.com/in/nikhila-c-r-925190197/"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="hover:underline inline-flex items-center gap-1"
+                                                        >
+                                                            Nikhila CR
+                                                            <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                                                        </a>
+                                                    </h3>
+                                                    <p className="text-xs text-primary font-mono uppercase tracking-wider">Founder at Dseide</p>
                                                 </div>
                                             </div>
                                             <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
@@ -414,10 +431,28 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                     <div className="md:col-span-2 border border-dotted border-primary/30 p-6 md:p-8 flex flex-col justify-between bg-primary/5 hover:bg-primary/10 transition-all duration-300 group relative overflow-hidden">
                                         <div className="relative z-10">
                                             <div className="flex items-center gap-4 mb-6">
-                                                <div className="w-12 h-12 rounded-full border border-dotted border-primary/30 bg-background flex items-center justify-center text-sm font-mono shadow-sm group-hover:scale-110 transition-transform text-primary">CF</div>
+                                                <div className="w-12 h-12 rounded-full border border-dotted border-primary/30 overflow-hidden relative shadow-sm group-hover:scale-110 transition-transform shrink-0">
+                                                    <Image
+                                                        src="/Cap.png"
+                                                        alt="Bharath M"
+                                                        fill
+                                                        sizes="48px"
+                                                        className="object-cover"
+                                                    />
+                                                </div>
                                                 <div>
-                                                    <h3 className="font-medium text-foreground text-lg">Co-Founder</h3>
-                                                    <p className="text-xs text-primary font-mono uppercase tracking-wider">CTO & Co-founder</p>
+                                                    <h3 className="font-medium text-foreground text-lg">
+                                                        <a
+                                                            href="https://www.linkedin.com/in/bharath-dseide/"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="hover:underline inline-flex items-center gap-1"
+                                                        >
+                                                            Bharath M
+                                                            <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                                                        </a>
+                                                    </h3>
+                                                    <p className="text-xs text-primary font-mono uppercase tracking-wider">Co-founder at Dseide</p>
                                                 </div>
                                             </div>
                                             <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
@@ -430,14 +465,32 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                         </div>
                                         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 -mr-16 -mt-16 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"></div>
                                     </div>
-                                    {/* Card 1: Jotham (Large) */}
-                                    <div className="md:col-span-2 md:row-span-2 border border-dotted border-foreground/20 p-6 md:p-8 flex flex-col justify-between bg-muted/5 hover:bg-muted/10 transition-all duration-300 group relative overflow-hidden">
+                                    {/* Card 1: Luvkush (Large) */}
+                                    <div className="md:col-span-2 border border-dotted border-foreground/20 p-6 md:p-8 flex flex-col justify-between bg-muted/5 hover:bg-muted/10 transition-all duration-300 group relative overflow-hidden">
                                         <div className="relative z-10">
                                             <div className="flex items-center gap-4 mb-6">
-                                                <div className="w-12 h-12 rounded-full border border-dotted border-foreground/20 bg-background flex items-center justify-center text-sm font-mono shadow-sm group-hover:scale-110 transition-transform">JO</div>
+                                                <div className="w-12 h-12 rounded-full border border-dotted border-foreground/20 overflow-hidden relative shadow-sm group-hover:scale-110 transition-transform shrink-0">
+                                                    <Image
+                                                        src="/Luvkush.jpg"
+                                                        alt="Luvkush Sharma"
+                                                        fill
+                                                        sizes="48px"
+                                                        className="object-cover"
+                                                    />
+                                                </div>
                                                 <div>
-                                                    <h3 className="font-medium text-foreground text-lg">Jotham</h3>
-                                                    <p className="text-xs text-muted-foreground font-mono">Product Manager @ Stealth</p>
+                                                    <h3 className="font-medium text-foreground text-lg">
+                                                        <a
+                                                            href="https://www.linkedin.com/in/luvkushsharma/"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="hover:underline inline-flex items-center gap-1"
+                                                        >
+                                                            Luvkush Sharma
+                                                            <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                                                        </a>
+                                                    </h3>
+                                                    <p className="text-xs text-muted-foreground font-mono">Product Lead @ Dseide</p>
                                                 </div>
                                             </div>
                                             <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
@@ -452,55 +505,123 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                         <div className="absolute top-0 right-0 w-32 h-32 bg-dot opacity-[0.03] -mr-16 -mt-16 rounded-full"></div>
                                     </div>
 
-                                    {/* Card 2: Sarah (Tall) */}
-                                    <div className="md:col-span-1 md:row-span-2 border border-dotted border-foreground/20 p-6 flex flex-col bg-muted/5 hover:bg-muted/10 transition-all duration-300 group">
-                                        <div className="flex flex-col h-full">
-                                            <div className="mb-6">
-                                                <div className="w-10 h-10 rounded-full border border-dotted border-foreground/20 bg-background flex items-center justify-center text-xs font-mono mb-3 group-hover:rotate-12 transition-transform">SC</div>
-                                                <h3 className="font-medium text-foreground">Sarah Chen</h3>
-                                                <p className="text-[10px] text-muted-foreground font-mono uppercase tracking-wider">Senior Engineer</p>
-                                            </div>
-                                            <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                                                "A versatile engineer who isn't afraid to dive deep into the stack. A joy to work with on complex design systems. His code is clean, documented, and highly performant."
-                                            </p>
-                                            <div className="pt-6 mt-auto">
-                                                <div className="flex gap-1">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20"></div>
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20"></div>
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20"></div>
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20"></div>
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20"></div>
+                                    {/* Card 2: Sahan (Large) */}
+                                    <div className="md:col-span-2 border border-dotted border-foreground/20 p-6 md:p-8 flex flex-col justify-between bg-muted/5 hover:bg-muted/10 transition-all duration-300 group relative overflow-hidden">
+                                        <div className="relative z-10">
+                                            <div className="flex items-center gap-4 mb-6">
+                                                <div className="w-12 h-12 rounded-full border border-dotted border-foreground/20 overflow-hidden relative shadow-sm group-hover:scale-110 transition-transform shrink-0">
+                                                    <Image
+                                                        src="/Sahan.jpg"
+                                                        alt="Sahan Angadi"
+                                                        fill
+                                                        sizes="48px"
+                                                        className="object-cover"
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <h3 className="font-medium text-foreground text-lg">
+                                                        <a
+                                                            href="https://www.linkedin.com/in/sahanangadi39/"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="hover:underline inline-flex items-center gap-1"
+                                                        >
+                                                            Sahan Angadi
+                                                            <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                                                        </a>
+                                                    </h3>
+                                                    <p className="text-xs text-muted-foreground font-mono">Software Engineer @ Dseide</p>
                                                 </div>
                                             </div>
+                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
+                                                "A versatile engineer who isn't afraid to dive deep into the stack. A joy to work with on complex design systems. His code is clean, documented, and highly performant."
+                                            </p>
+                                        </div>
+                                        <div className="mt-8 flex items-center gap-3 relative z-10">
+                                            <div className="h-px flex-1 bg-border/50 border-dotted border-t"></div>
+                                            <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-[0.2em]">Engineering Partner</span>
                                         </div>
                                     </div>
 
-                                    {/* Card 3: Michael (Small) */}
-                                    <div className="md:col-span-1 border border-dotted border-foreground/20 p-6 bg-muted/5 hover:bg-muted/10 transition-all duration-300 group">
-                                        <div className="flex items-center gap-3 mb-4">
-                                            <div className="w-8 h-8 rounded-full border border-dotted border-foreground/20 bg-background flex items-center justify-center text-[10px] font-mono group-hover:scale-110 transition-transform">MS</div>
-                                            <h3 className="font-medium text-foreground text-sm">Michael Scott</h3>
+                                    {/* Card 3: Jotham (Large) */}
+                                    <div className="md:col-span-2 border border-dotted border-foreground/20 p-6 md:p-8 flex flex-col justify-between bg-muted/5 hover:bg-muted/10 transition-all duration-300 group relative overflow-hidden">
+                                        <div className="relative z-10">
+                                            <div className="flex items-center gap-4 mb-6">
+                                                <div className="w-12 h-12 rounded-full border border-dotted border-foreground/20 overflow-hidden relative shadow-sm group-hover:scale-110 transition-transform shrink-0">
+                                                    <Image
+                                                        src="/Jotham.png"
+                                                        alt="Jotham"
+                                                        fill
+                                                        sizes="48px"
+                                                        className="object-cover"
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <h3 className="font-medium text-foreground text-lg">
+                                                        <a
+                                                            href="https://www.linkedin.com/in/jp69/"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="hover:underline inline-flex items-center gap-1"
+                                                        >
+                                                            Jotham
+                                                            <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                                                        </a>
+                                                    </h3>
+                                                    <p className="text-xs text-muted-foreground font-mono">Product Manager @ Stealth</p>
+                                                </div>
+                                            </div>
+                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
+                                                "Exceptional eye for design and performance. Yash delivers high-quality code consistently and is always willing to help."
+                                            </p>
                                         </div>
-                                        <p className="text-xs text-muted-foreground leading-relaxed">
-                                            "Exceptional eye for design and performance. Yash delivers high-quality code consistently and is always willing to help."
-                                        </p>
+                                        <div className="mt-8 flex items-center gap-3 relative z-10">
+                                            <div className="h-px flex-1 bg-border/50 border-dotted border-t"></div>
+                                            <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-[0.2em]">Collaborator</span>
+                                        </div>
                                     </div>
 
-                                    {/* Card 4: Elena (Small) */}
-                                    <div className="md:col-span-1 border border-dotted border-foreground/20 p-6 bg-muted/5 hover:bg-muted/10 transition-all duration-300 group">
-                                        <div className="flex items-center gap-3 mb-4">
-                                            <div className="w-8 h-8 rounded-full border border-dotted border-foreground/20 bg-background flex items-center justify-center text-[10px] font-mono group-hover:scale-110 transition-transform">EV</div>
-                                            <h3 className="font-medium text-foreground text-sm">Elena Vance</h3>
+                                    {/* Card 4: Deepu (Large) */}
+                                    <div className="md:col-span-2 border border-dotted border-foreground/20 p-6 md:p-8 flex flex-col justify-between bg-muted/5 hover:bg-muted/10 transition-all duration-300 group relative overflow-hidden">
+                                        <div className="relative z-10">
+                                            <div className="flex items-center gap-4 mb-6">
+                                                <div className="w-12 h-12 rounded-full border border-dotted border-foreground/20 overflow-hidden relative shadow-sm group-hover:scale-110 transition-transform shrink-0">
+                                                    <Image
+                                                        src="/Deepu.jpg"
+                                                        alt="Jnyandeep Chevula"
+                                                        fill
+                                                        sizes="48px"
+                                                        className="object-cover"
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <h3 className="font-medium text-foreground text-lg">
+                                                        <a
+                                                            href="https://www.linkedin.com/in/chevula-jnyandeep/"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="hover:underline inline-flex items-center gap-1"
+                                                        >
+                                                            Jnyandeep Chevula
+                                                            <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                                                        </a>
+                                                    </h3>
+                                                    <p className="text-xs text-muted-foreground font-mono">Software Engineer</p>
+                                                </div>
+                                            </div>
+                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
+                                                “His work on the frontend was pivotal. He combines strong engineering execution with a sharp eye for design detail, resulting in highly polished user experiences.”                                            </p>
                                         </div>
-                                        <p className="text-xs text-muted-foreground leading-relaxed">
-                                            "His contribution to our core UI library was pivotal. He understands the balance between speed and quality."
-                                        </p>
+                                        <div className="mt-8 flex items-center gap-3 relative z-10">
+                                            <div className="h-px flex-1 bg-border/50 border-dotted border-t"></div>
+                                            <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-[0.2em]">UI Contributor</span>
+                                        </div>
                                     </div>
 
                                 </div>
                             </div>
                         </section>
-                        )}
+
 
                         <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal">
                             <div className="absolute inset-0 bg-gradient-to-b from-background to-transparent pointer-events-none" />
