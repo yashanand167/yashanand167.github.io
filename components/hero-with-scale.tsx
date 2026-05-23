@@ -568,7 +568,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                                             <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
                                                         </a>
                                                     </h3>
-                                                    <p className="text-xs text-muted-foreground font-mono">Product Manager @ Stealth</p>
+                                                    <p className="text-xs text-muted-foreground font-mono">FrontEnd Developer @Dseide</p>
                                                 </div>
                                             </div>
                                             <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
