@@ -177,13 +177,13 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                 </h2>
 
                                 {/* Company Header */}
-                                <div className="flex items-center gap-4 mb-8">
+                                <div className="flex items-center gap-4 mb-4 md:mb-6">
                                     <a href="https://dseide.com" target="_blank" rel="noopener noreferrer" className="w-16 h-16 rounded-2xl border border-dotted border-primary/40 bg-primary/5 flex items-center justify-center overflow-hidden shadow-sm relative group shrink-0">
                                         <Image src="/images.png" alt="Dseide Healthcare Network" fill loading="lazy" sizes="64px" className="object-cover transition-transform group-hover:scale-110" />
                                     </a>
                                     <div>
                                         <a href="https://dseide.com" target="_blank" rel="noopener noreferrer" className="hover:underline transition-colors">
-                                            <h3 className="font-medium text-foreground text-xl">Dseide Healthcare Network</h3>
+                                            <h3 className="font-medium text-foreground text-lg md:text-xl">Dseide Healthcare Network</h3>
                                         </a>
                                         <p className="text-sm text-muted-foreground font-mono mt-1">Full-stack & Product Design • Bangalore</p>
                                     </div>
@@ -191,7 +191,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
 
                                 {/* Tree Branch Timeline */}
                                 <ExpandableExperience>
-                                    <div className="ml-4 md:ml-8 border-l-2 border-border/50 pl-6 md:pl-8 pb-4 relative space-y-8 md:space-y-12">
+                                    <div className="ml-4 md:ml-8 border-l-2 border-border/50 pl-6 md:pl-8 pb-4 relative space-y-4 md:space-y-6">
                                         {/* Role 1 */}
                                         <div className="relative group">
                                             {/* Connector Line & Dot */}
@@ -311,14 +311,14 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                     }
                                     className="group inline-block cursor-pointer"
                                 >
-                                    <div className="flex items-center gap-4 mb-8 mt-16 transition-all">
+                                    <div className="flex items-center gap-4 mb-4 md:mb-6 mt-8 md:mt-12 transition-all">
 
                                         <div className="w-16 h-16 rounded-2xl border border-dotted border-foreground/40 bg-muted/10 flex items-center justify-center text-xl font-mono shadow-sm text-foreground group-hover:border-primary/50 group-hover:bg-primary/5 transition-all">
                                             <Palette className="w-8 h-8 opacity-80 group-hover:scale-110 transition-transform" />
                                         </div>
 
                                         <div>
-                                            <h3 className="font-medium text-foreground text-xl group-hover:text-primary transition-colors">
+                                            <h3 className="font-medium text-foreground text-lg md:text-xl group-hover:text-primary transition-colors">
                                                 Freelance
                                             </h3>
 
@@ -332,7 +332,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
 
                                 {/* Tree Branch Timeline */}
                                 <ExpandableExperience>
-                                    <div className="ml-4 md:ml-8 border-l-2 border-border/50 pl-6 md:pl-8 pb-4 relative space-y-8 md:space-y-12">
+                                    <div className="ml-4 md:ml-8 border-l-2 border-border/50 pl-6 md:pl-8 pb-4 relative space-y-4 md:space-y-6">
                                         {/* Role 1 */}
                                         <div className="relative group">
                                             {/* Connector Line & Dot */}
@@ -416,7 +416,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                                     <p className="text-xs text-primary font-mono uppercase tracking-wider">Founder at Dseide</p>
                                                 </div>
                                             </div>
-                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
+                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                                                 "Yash is a visionary engineer who doesn't just write code, but understands the soul of the product. His ability to anticipate user needs and implement them flawlessly is rare."
                                             </p>
                                         </div>
@@ -455,7 +455,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                                     <p className="text-xs text-primary font-mono uppercase tracking-wider">Co-founder at Dseide</p>
                                                 </div>
                                             </div>
-                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
+                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                                                 "Working with Yash has been an absolute game-changer for our technical roadmap. He brings a level of craftsmanship and architectural thinking that elevated our entire platform."
                                             </p>
                                         </div>
@@ -493,7 +493,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                                     <p className="text-xs text-muted-foreground font-mono">Product Lead @ Dseide</p>
                                                 </div>
                                             </div>
-                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
+                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                                                 "Working with yash has been an amazing experience because he is both highly knowledgeable and very approachable. He always takes the time to explain coding concepts clearly. Whenever I needed help, he was patient, supportive, and willing to guide me. His passion for coding has inspired me to grow as a developer."
                                             </p>
                                         </div>
@@ -533,7 +533,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                                     <p className="text-xs text-muted-foreground font-mono">Software Engineer @ Dseide</p>
                                                 </div>
                                             </div>
-                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
+                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                                                 "A versatile engineer who isn't afraid to dive deep into the stack. A joy to work with on complex design systems. His code is clean, documented, and highly performant."
                                             </p>
                                         </div>
@@ -571,7 +571,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                                     <p className="text-xs text-muted-foreground font-mono">FrontEnd Developer @Dseide</p>
                                                 </div>
                                             </div>
-                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
+                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                                                 "Exceptional eye for design and performance. Yash delivers high-quality code consistently and is always willing to help."
                                             </p>
                                         </div>
@@ -609,7 +609,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                                     <p className="text-xs text-muted-foreground font-mono">Software Engineer</p>
                                                 </div>
                                             </div>
-                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
+                                            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                                                 “His work on the frontend was pivotal. He combines strong engineering execution with a sharp eye for design detail, resulting in highly polished user experiences.”                                            </p>
                                         </div>
                                         <div className="mt-8 flex items-center gap-3 relative z-10">
@@ -737,6 +737,6 @@ const techStack2 = [
 
 const VerticalStripes = () => {
     return (
-        <div className="relative z-10 min-h-full w-8 md:w-14 border-l border-r border-border shrink-0 bg-background" />
+        <div className="relative z-10 w-6 md:w-14 border-l border-r border-border shrink-0 bg-background" />
     )
 }
