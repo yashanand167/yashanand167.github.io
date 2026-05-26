@@ -58,10 +58,16 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                     <main className="flex-1 min-w-0">
                         {/* Dot Pattern Section (The "Canvas") */}
                         <section className="bg-dot w-full h-48 md:h-60 border-b border-border flex items-center justify-center p-8">
-                            <div
-                                className="relative w-fit h-fit group"
+                            <motion.div
+                                drag
+                                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                                dragElastic={0.3}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                className="relative w-fit h-fit group cursor-grab active:cursor-grabbing select-none"
                             >
-                                <div className="relative w-40 md:w-80 aspect-square">
+                                <div className="relative w-40 md:w-80 aspect-square pointer-events-none">
                                     <Image
                                         src="/Logo.png"
                                         alt="Logo"
@@ -69,6 +75,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                         sizes="(max-width: 768px) 160px, 320px"
                                         loading="lazy"
                                         className="object-contain drop-shadow-sm transition-all dark:hidden"
+                                        draggable={false}
                                     />
                                     <Image
                                         src="/LightLogo.png"
@@ -77,10 +84,10 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                         sizes="(max-width: 768px) 160px, 320px"
                                         loading="lazy"
                                         className="object-contain drop-shadow-sm transition-all hidden dark:block"
+                                        draggable={false}
                                     />
                                 </div>
-
-                            </div>
+                            </motion.div>
                         </section>
 
                         {/* Integrated Bio Grid Section */}
