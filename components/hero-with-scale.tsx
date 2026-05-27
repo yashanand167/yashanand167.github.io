@@ -8,6 +8,7 @@ import { GitHubContributions, GitHubContributionsFallback } from "@/components/g
 import type { Activity } from "@/components/contribution-graph";
 import { RotateWords } from "./rotate-words";
 import { Marquee } from "./marquee";
+import { FluidDotGrid } from "./fluid-dot-grid";
 
 let isAppHydrated = false;
 
@@ -57,7 +58,8 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
 
                     <main className="flex-1 min-w-0">
                         {/* Dot Pattern Section (The "Canvas") */}
-                        <section className="bg-dot w-full h-48 md:h-60 border-b border-border flex items-center justify-center p-8">
+                        <section className="relative w-full h-48 md:h-60 border-b border-border flex items-center justify-center p-8 bg-background overflow-hidden">
+                            <FluidDotGrid />
                             <motion.div
                                 drag
                                 dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
