@@ -131,10 +131,20 @@ This flow was designed to ensure only specific and impactful communities are see
 
 
 
-## Final Design Glimpses
+## Learnings from the startup
 
-Below are some glimpses of the finalized UI design, illustrating the unified design system, community dashboard, core navigation, and analytics dashboard modules:
+Working at this startup was a career-defining experience. I learned not only how to design a better product/software but also how design aligns well with development perspective. In a fast-paced environment, having a developer who can design (or a designer who can write production-ready code) acts as a <mark>force multiplier</mark> for the team.
 
+Fun fact: I entirely learned frontend development in the startup while working on the codebase and including features mentioned above. It was challenging and I went through several rapid upskills during this journey, but I believe that this experience was one of the most enriching experiences of my life.
+
+I mostly learned about:
+- **Performance & Styling Optimization:** Designing and writing clean, scalable styles that load instantly without bloat.
+- **Efficient Data Fetching:** Learning how to manage complex API states, prevent unnecessary re-renders, and use tools like <mark>React Hooks and Axios</mark> effectively.
+- **Anti-patterns to Avoid:** Learning how to prevent code duplication by structuring components to be modular and reusable.
+- **Open Source Collaboration:** Reading and participating in a well-structured open-source codebase taught me git workflows, documentation, and code review standards.
+
+
+![Memos](/Memos.png)
 
 
 
