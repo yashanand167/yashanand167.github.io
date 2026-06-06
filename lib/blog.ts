@@ -57,7 +57,7 @@ export async function getPostData(slug: string): Promise<BlogPost> {
     const processedContent = await remark()
         .use(html)
         .process(matterResult.content);
-    const contentHtml = processedContent.toString();
+    const contentHtml = processedContent.toString().replace(/<img /g, '<img loading="lazy" ');
 
     return {
         slug,
