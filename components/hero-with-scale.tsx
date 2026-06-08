@@ -518,12 +518,12 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                                 </div>
                                             </div>
                                             <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                                                "Working with yash has been an amazing experience because he is both highly knowledgeable and very approachable. He always takes the time to explain coding concepts clearly. Whenever I needed help, he was patient, supportive, and willing to guide me. His passion for coding has inspired me to grow as a developer."
+                                                "Working with Yash has been an amazing experience because he is both highly knowledgeable and very approachable. He always takes the time to explain coding concepts clearly. Whenever I needed help, he was patient, supportive, and willing to guide me. His passion for coding has inspired me to grow as a developer."
                                             </p>
                                         </div>
                                         <div className="mt-8 flex items-center gap-3 relative z-10">
                                             <div className="h-px flex-1 bg-border/50 border-dotted border-t"></div>
-                                            <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-[0.2em]">Project Lead 2024</span>
+                                            <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-[0.2em]">Project Lead 2025</span>
                                         </div>
                                         {/* Subtle background decoration */}
                                         <div className="absolute top-0 right-0 w-32 h-32 bg-dot opacity-[0.03] -mr-16 -mt-16 rounded-full"></div>
