@@ -7,11 +7,11 @@ export default function DesignJourney() {
         <section className="relative mx-auto max-w-5xl px-4 md:px-16 py-8 md:py-16">
 
             <div className="mb-12 md:mb-16">
-                <p className="text-sm text-neutral-500">
-                    My Work Process
+                <p className="text-sm text-neutral-500 font-mono">
+                    System Architecture
                 </p>
                 <h2 className="mt-2 text-2xl md:text-2xl font-medium tracking-tight">
-                    How ideas become interfaces
+                    My Design to Development Loop
                 </h2>
             </div>
             <div className="relative">
@@ -95,13 +95,13 @@ export default function DesignJourney() {
                     hover:scale-[1.02]
                   `}
                                 >
-                                    <p className="mb-2 text-sm font-mono text-muted-foreground">
-                                        0{index + 1}
+                                    <p className="mb-2 text-sm font-mono text-primary">
+                                        STEP_0{index + 1}
                                     </p>
-                                    <h3 className="text-xl font-medium text-foreground">
+                                    <h3 className="text-lg font-medium text-foreground tracking-tight">
                                         {item.title}
                                     </h3>
-                                    <p className="mt-2 text-sm text-muted-foreground">
+                                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                                         {item.desc}
                                     </p>
                                 </div>
@@ -146,50 +146,44 @@ export default function DesignJourney() {
 
 const process = [
     {
-        title: "Question",
+        title: "Goal Parsing & Deconstruction",
         desc:
-            "Every project starts with understanding the problem before opening any design tool. I focus on what users are trying to achieve, why the feature exists, and what success should look like."
+            "Receiving prompt instructions and code objectives. Parsing semantic intent, mapping workspace boundaries, and programmatically defining success constraints."
     },
 
     {
-        title: "Research",
+        title: "Context Retrieval (RAG)",
         desc:
-            "I gather context through references, patterns, competitor analysis, and user behavior. The goal is not copying ideas but identifying opportunities and understanding expectations."
+            "Performing dependency mapping and structural schema checks. Analyzing existing code designs, directory states, and active types to prevent redundant implementations."
     },
 
     {
-        title: "Structure",
+        title: "Orchestrated Architecture Planning",
         desc:
-            "Before creating screens, I break the experience into systems. I map user flows, identify reusable patterns, define content hierarchy, and think through possible states and edge cases."
+            "Coordinating specialized execution paths (Planning, Structuring, Reasoning). Drafting technical specs, UI component layouts, and state management schemas before writing code."
     },
 
     {
-        title: "Wireframe",
+        title: "Iterative Code Synthesis",
         desc:
-            "I start shaping the experience with low-fidelity layouts. This stage helps me focus on navigation, information placement, and interactions without getting distracted by visual details."
+            "Writing modular, semantic React & React Native code. Binding designs directly to unified theme tokens (spacing grids, OKLCH scales, Tailwind configurations) to build high-performance components."
     },
 
     {
-        title: "Design System",
+        title: "Self-Reflection & Diagnostic Loop",
         desc:
-            "Rather than designing isolated screens, I create reusable building blocks. Components, spacing rules, typography, and variants establish consistency and make scaling easier."
+            "Executing dry-runs, analyzing rendering diagnostics, and self-linting. Debugging state regressions, optimizing re-render loops, and securing smooth 60fps animations."
     },
 
     {
-        title: "Build",
+        title: "Rigorous Build Verification",
         desc:
-            "Design and code begin connecting here. I translate interfaces into reusable components while considering responsiveness, accessibility, loading states, and maintainability."
+            "Conducting local build checks and compilation tests. Verifying responsive flex structures across standard device viewports and checking styling alignment."
     },
 
     {
-        title: "Refine",
+        title: "Production Release & Feedback",
         desc:
-            "Implementation often reveals things static designs miss. I iterate on spacing, interactions, animations, performance, and edge cases until the experience feels polished."
-    },
-
-    {
-        title: "Ship",
-        desc:
-            "Shipping is where learning starts. I use feedback and real usage to improve the product, making each iteration more informed than the previous one."
+            "Deploying verified code, compiling changes, and logging metrics. Collecting real-world user logs and human-in-the-loop feedback to iterate on the next lifecycle cycle."
     }
 ]

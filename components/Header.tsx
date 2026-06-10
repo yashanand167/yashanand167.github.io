@@ -96,6 +96,9 @@ export default function Header() {
                         <NavItem href="/blogs" active={pathname.startsWith("/blogs")}>
                             Blogs
                         </NavItem>
+                        <NavItem href="/personal" active={pathname.startsWith("/personal")}>
+                            Personal
+                        </NavItem>
                     </nav>
 
                     <div className="flex items-center gap-2">
