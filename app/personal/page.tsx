@@ -144,7 +144,7 @@ export default function Home() {
                                         {/* Handbook Graphic */}
                                         <div className="w-full md:w-[35%] shrink-0 aspect-[4/3] bg-muted/20 relative overflow-hidden rounded-xl border border-border flex items-center justify-center bg-gradient-to-br from-primary/5 to-muted">
                                             <Image
-                                                src="/handbook.png"
+                                                src="/Handbook.png"
                                                 alt="AI Design Handbook Preview"
                                                 loading="lazy"
                                                 fill
