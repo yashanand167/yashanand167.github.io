@@ -117,7 +117,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                         Hi, I am Yash Anand
                                     </h1>
                                     <div className="text-[10px] md:text-base font-mono text-muted-foreground mt-1 md:mt-2">
-                                        <RotateWords words={["Product-Focused Engineer", "Frontend Developer", "Open Source Contributor", "Product Designer", "Creative Technologist"]} />
+                                        <RotateWords words={["High-Agency Builder", "Full-Stack Design Engineer", "Product Engineer", "Open Source Contributor", "0-to-1 Prototyper"]} />
                                     </div>
 
                                 </div>
@@ -129,17 +129,17 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                 </h2>
                                 <div className="space-y-8">
                                     <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl">
-                                        A product-focused engineer dedicated to bridging the gap between design and code.
-                                        I specialize in building high-performance web interfaces and contributing to open-source
-                                        projects that empower developers to create beautiful digital experiences.
+                                        A high-agency, product-focused engineer who designs, codes, and ships fast. 
+                                        Formerly the first engineer/designer hire at Dseide Healthcare Network, I specialize 
+                                        in taking features all the way from Figma concepts to production React Native & Web apps.
                                     </p>
 
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {[
-                                            { title: "Product-First Thinking", desc: "Crafting interfaces that balance business goals with user delight." },
-                                            { title: "Modern Tech Stack", desc: "Next.js, TypeScript, and Framer Motion for fluid experiences." },
-                                            { title: "Open Source", desc: "Contributing to the ecosystem" },
-                                            { title: "Design Systems", desc: "Building scalable, maintainable component libraries from scratch." }
+                                            { title: "Design-to-Code Ownership", desc: "No PM needed. I translate product ideas into high-fidelity Figma designs and build them into clean code." },
+                                            { title: "Velocity & Startup DNA", desc: "Comfortable with ambiguity, rapid prototyping, and learning new stacks on the fly." },
+                                            { title: "Open Source Contributor", desc: "Active contributor to modern web ecosystems (UI libraries and developer tooling)." },
+                                            { title: "Aesthetic & Performance", desc: "Obsessed with 60fps physics-based animations, clean component architectures, and fast bundle loading." }
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex gap-3">
                                                 <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
@@ -217,14 +217,14 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
 
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">Product Design for Mobile App</h4>
+                                                <h4 className="font-medium text-foreground text-lg">0-to-1 Product Design for Mobile App</h4>
                                                 <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Aug 2025 - Oct 2025</span>
                                             </div>
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Designed the core product experience for the mobile application from scratch.
+                                                Designed the entire core mobile application from a blank canvas in Figma. Structured a rigid 8px design system to handle high-density medical clinical records and workflows for healthcare professionals.
                                             </p>
                                             <div className="flex flex-wrap gap-2 mt-4">
-                                                {["Figma", "UI/UX", "Mobile Design", "User Research", "Competitor Analysis"].map((tech, i) => (
+                                                {["Figma", "UI/UX", "Mobile Design", "User Research", "Design System"].map((tech, i) => (
                                                     <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
                                                 ))}
                                             </div>
@@ -238,14 +238,14 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
 
                                         <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                <h4 className="font-medium text-foreground text-lg">Frontend Development</h4>
+                                                <h4 className="font-medium text-foreground text-lg">Mobile App Development</h4>
                                                 <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Oct 2025 - Nov 2025</span>
                                             </div>
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Developed the frontend of the mobile application using React Native (Expo).
+                                                Learned React Native and Expo on the fly to build and launch the production mobile app in 4 weeks. Developed clean local data caching via TanStack Query and state management with Zustand.
                                             </p>
                                             <div className="flex flex-wrap gap-2 mt-4">
-                                                {["React Native", "Expo", "Frontend", "Zustand", "Tanstack Query"].map((tech, i) => (
+                                                {["React Native", "Expo", "Zustand", "TanStack Query", "Mobile Dev"].map((tech, i) => (
                                                     <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
                                                 ))}
                                             </div>
@@ -262,14 +262,14 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
 
                                                 <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                        <h4 className="font-medium text-foreground text-lg">Website Design & Dashboard</h4>
+                                                        <h4 className="font-medium text-foreground text-lg">Web Dashboard & Landing Page</h4>
                                                         <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Nov 2025 - Dec 2025</span>
                                                     </div>
                                                     <p className="text-sm text-muted-foreground leading-relaxed">
-                                                        Designed the Framer website leveraging Figma and Framer, and built the platform dashboard using React and Axios for data fetching.
+                                                        Built the web dashboard from scratch using React, integrating REST APIs with Axios. Designed and shipped the corporate landing page on Framer.
                                                     </p>
                                                     <div className="flex flex-wrap gap-2 mt-4">
-                                                        {["Framer", "Figma", "React", "Axios"].map((tech, i) => (
+                                                        {["React", "Framer", "Axios", "REST API", "Figma"].map((tech, i) => (
                                                             <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
                                                         ))}
                                                     </div>
@@ -283,14 +283,14 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
 
                                                 <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                        <h4 className="font-medium text-foreground text-lg">UI Refinement & API Testing</h4>
+                                                        <h4 className="font-medium text-foreground text-lg">Performance Refinement & API Testing</h4>
                                                         <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Jan 2026 - Feb 2026</span>
                                                     </div>
                                                     <p className="text-sm text-muted-foreground leading-relaxed">
-                                                        Refined UI components in the mobile app and wrote API test files using Jest.
+                                                        Optimized React Native rendering performance to eliminate frame drops. Wrote unit tests and mock API integrations using Jest to secure core flows.
                                                     </p>
                                                     <div className="flex flex-wrap gap-2 mt-4">
-                                                        {["UI/UX", "Jest", "API Testing"].map((tech, i) => (
+                                                        {["Jest", "UI Performance", "React Native", "API Testing"].map((tech, i) => (
                                                             <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
                                                         ))}
                                                     </div>
@@ -304,14 +304,14 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
 
                                                 <div className="bg-muted/5 border border-border/50 rounded-xl p-5 hover:border-primary/40 transition-colors">
                                                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
-                                                        <h4 className="font-medium text-foreground text-lg">Event Module Design</h4>
+                                                        <h4 className="font-medium text-foreground text-lg">Event & Webinar Module Architecture</h4>
                                                         <span className="text-xs font-mono text-muted-foreground bg-background px-2 py-1 rounded border border-border/50 w-fit">Mar 2026 - May 2026</span>
                                                     </div>
                                                     <p className="text-sm text-muted-foreground leading-relaxed">
-                                                        Designed the event module for the next version within the existing platform architecture.
+                                                        Spearheaded the technical architecture and interface design of the upcoming live event and medical webinar module, mapping state schemas and event routing.
                                                     </p>
                                                     <div className="flex flex-wrap gap-2 mt-4">
-                                                        {["Product Design", "Figma", "Feature Extension"].map((tech, i) => (
+                                                        {["System Architecture", "Figma", "Feature Ownership", "API Design"].map((tech, i) => (
                                                             <span key={i} className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded-md border border-primary/20">{tech}</span>
                                                         ))}
                                                     </div>
@@ -398,6 +398,148 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                                     <span key={i} className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">{tech}</span>
                                                 ))}
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="relative w-full border-b border-border">
+                            <div className="p-4 md:p-8">
+                                <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-8">
+                                    Featured Projects
+                                </h2>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    {/* askNow Project Card */}
+                                    <div className="group relative flex flex-col rounded-2xl border border-dotted border-foreground/20 bg-muted/5 overflow-hidden hover:border-foreground/30 transition-all shadow-sm">
+                                        {/* Image Container */}
+                                        <div className="aspect-video w-full bg-muted/20 relative overflow-hidden border-b border-dotted border-foreground/20 flex items-center justify-center bg-gradient-to-br from-primary/5 to-muted">
+                                            <Image
+                                                src="/askNow.png"
+                                                alt="askNow Project Preview"
+                                                fill
+                                                loading="lazy"
+                                                sizes="(max-width: 768px) 100vw, 50vw"
+                                                className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                        </div>
+
+                                        {/* Content */}
+                                        <div className="p-6 flex flex-col flex-1">
+                                            <div className="flex items-center justify-between mb-3 gap-2">
+                                                <h3 className="text-lg font-medium text-foreground">askNow</h3>
+                                                <span className="shrink-0 px-2 py-1 text-[10px] font-mono text-primary bg-primary/10 border border-primary/20 rounded-md">Live Platform</span>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground mb-6 leading-relaxed flex-1">
+                                                An end-to-end survey platform for creating, managing, and analyzing responses, built with a Dockerized Prisma backend to handle concurrent users.
+                                            </p>
+
+                                            <div className="flex items-center justify-between mt-auto">
+                                                <div className="flex flex-wrap gap-2">
+                                                    {["Next.js", "React", "Tailwind", "Prisma", "Docker"].map((tech, i) => (
+                                                        <span key={i} className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">{tech}</span>
+                                                    ))}
+                                                </div>
+                                                <a
+                                                    href="https://asknow.vercel.app/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="shrink-0 text-xs font-medium text-foreground hover:text-primary transition-colors flex items-center gap-1 group/link"
+                                                >
+                                                    Live Site <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* zyra Project Card */}
+                                    <div className="group relative flex flex-col rounded-2xl border border-dotted border-foreground/20 bg-muted/5 overflow-hidden hover:border-foreground/30 transition-all shadow-sm">
+                                        {/* Image Container */}
+                                        <div className="aspect-video w-full bg-muted/20 relative overflow-hidden border-b border-dotted border-foreground/20 flex items-center justify-center bg-gradient-to-br from-primary/5 to-muted">
+                                            <Image
+                                                src="/zyra.png"
+                                                alt="zyra Project Preview"
+                                                fill
+                                                loading="lazy"
+                                                sizes="(max-width: 768px) 100vw, 50vw"
+                                                className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                        </div>
+
+                                        {/* Content */}
+                                        <div className="p-6 flex flex-col flex-1">
+                                            <div className="flex items-center justify-between mb-3 gap-2">
+                                                <h3 className="text-lg font-medium text-foreground">zyra</h3>
+                                                <span className="shrink-0 px-2 py-1 text-[10px] font-mono text-primary bg-primary/10 border border-primary/20 rounded-md">Editor Core</span>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground mb-6 leading-relaxed flex-1">
+                                                A sleek, minimalist rich-text editor designed to deeply explore Tiptap's extensible node architectures and Framer Motion interactions.
+                                            </p>
+
+                                            <div className="flex items-center justify-between mt-auto">
+                                                <div className="flex flex-wrap gap-2">
+                                                    {["Next.js", "Tiptap", "Framer Motion", "Prisma", "Tailwind"].map((tech, i) => (
+                                                        <span key={i} className="text-[10px] font-mono text-foreground bg-foreground/5 px-2 py-1 rounded-md border border-border">{tech}</span>
+                                                    ))}
+                                                </div>
+                                                <a
+                                                    href="https://github.com/yashanand167/zyra"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="shrink-0 text-xs font-medium text-foreground hover:text-primary transition-colors flex items-center gap-1 group/link"
+                                                >
+                                                    GitHub <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Highlight Project: Inertia UI */}
+                                <div className="mt-8 border border-dotted border-foreground/20 rounded-2xl overflow-hidden bg-muted/5 relative group hover:border-foreground/30 transition-colors">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 -mr-16 -mt-16 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors" />
+
+                                    <div className="relative z-10 flex flex-col md:flex-row">
+                                        {/* Image */}
+                                        <div className="md:w-[40%] relative bg-gradient-to-br from-primary/5 to-transparent overflow-hidden aspect-video md:aspect-auto min-h-[200px]">
+                                            <Image
+                                                src="/Landing Page.png"
+                                                alt="Inertia UI Preview"
+                                                fill
+                                                loading="lazy"
+                                                sizes="(max-width: 768px) 100vw, 40vw"
+                                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                        </div>
+
+                                        {/* Content */}
+                                        <div className="flex-1 p-6 md:p-8 flex flex-col justify-center border-t md:border-l md:border-t-0 border-dotted border-foreground/20">
+                                            <div className="flex items-center gap-3 mb-3 flex-wrap">
+                                                <h3 className="text-lg md:text-xl font-medium text-foreground">
+                                                    Inertia-UI
+                                                </h3>
+                                                <span className="px-2 py-1 text-[10px] font-mono text-primary bg-primary/10 border border-primary/20 rounded-md">
+                                                    In Active Dev
+                                                </span>
+                                            </div>
+
+                                            <p className="text-sm text-muted-foreground leading-relaxed max-w-xl mb-6">
+                                                A high-performance component library built from scratch, prioritizing hardware-accelerated fluid motion, design token constraints, and a perceptually uniform OKLCH color system.
+                                            </p>
+
+                                            <a
+                                                href="https://www.figma.com/design/PBv5vZwApM9jznIO8coAFs/Inertia?node-id=67-46&t=RM7kbxONhidMbwo0-1"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="shrink-0 flex items-center justify-center gap-2 px-5 py-2.5 bg-foreground text-background rounded-full text-sm font-medium hover:scale-105 transition-transform w-fit group/btn"
+                                            >
+                                                <span>Figma Design Token Spec</span>
+                                                <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
