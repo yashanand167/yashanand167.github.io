@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from "motion/react";
 import { GitHubContributions, GitHubContributionsFallback } from "@/components/github-contributions";
 import type { Activity } from "@/components/contribution-graph";
 import { RotateWords } from "./rotate-words";
-import { Marquee } from "./marquee";
 import { FluidDotGrid } from "./fluid-dot-grid";
 
 let isAppHydrated = false;
@@ -166,12 +165,19 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
 
                         <section className="relative w-full">
                             <div className="p-4 md:p-8">
-                                <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-4">
+                                <h2 className="text-xl md:text-2xl font-medium tracking-tight text-foreground mb-6">
                                     Stacks I am familiar with
                                 </h2>
-                                <div className="py-3 space-y-2">
-                                    <Marquee items={techStack1} direction="left" speed={40} />
-                                    <Marquee items={techStack2} direction="right" speed={35} />
+                                <div className="flex flex-wrap gap-2 md:gap-3">
+                                    {techStack.map((tech) => (
+                                        <div
+                                            key={tech.name}
+                                            className="flex items-center gap-2 rounded-full border border-border bg-muted/20 px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium text-foreground hover:bg-muted/40 hover:border-primary/30 transition-colors cursor-default"
+                                        >
+                                            {getTechIcon(tech.name)}
+                                            <span>{tech.name}</span>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </section>
@@ -870,7 +876,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
     );
 }
 
-const techStack1 = [
+const techStack = [
     { name: "React" },
     { name: "Next.js" },
     { name: "TypeScript" },
@@ -881,9 +887,6 @@ const techStack1 = [
     { name: "PostgreSQL" },
     { name: "Redis" },
     { name: "Bun" },
-];
-
-const techStack2 = [
     { name: "Docker" },
     { name: "Github" },
     { name: "Gitlab" },
@@ -894,6 +897,131 @@ const techStack2 = [
     { name: "shadcn" },
     { name: "Jest" }
 ];
+
+const getTechIcon = (name: string) => {
+    const className = "w-3.5 h-3.5 shrink-0";
+    switch (name) {
+        case "React":
+        case "React Native":
+            return (
+                <svg className={`${className} fill-none stroke-current`} viewBox="0 0 24 24" strokeWidth="2">
+                    <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(30 12 12)" />
+                    <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(90 12 12)" />
+                    <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(150 12 12)" />
+                    <circle cx="12" cy="12" r="2" fill="currentColor" />
+                </svg>
+            );
+        case "Next.js":
+            return (
+                <svg className={`${className} fill-current`} viewBox="0 0 24 24">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.882 18.067L11.533 9.778v8.289H9.778V7.111h1.778l6.322 8.289v-8.289h1.778v10.956z" />
+                </svg>
+            );
+        case "TypeScript":
+            return (
+                <svg className={`${className} fill-current`} viewBox="0 0 24 24">
+                    <path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0H1.125zm12.923 12.388c0-2.83 2.115-3.836 4.908-3.836 2.474 0 4.197 1.026 4.197 1.026l-.82 2.05s-1.385-.82-2.718-.82c-1.487 0-2.513.513-2.513 1.59 0 2.513 5.95 2.154 5.95 6.05 0 2.923-2.154 4.092-4.974 4.092-2.82 0-4.718-1.282-4.718-1.282l.872-2.154s1.744.974 3.282.974c1.59 0 2.564-.615 2.564-1.744 0-2.82-5.95-2.205-5.95-6.05v.005zm-1.897 10.359H9.333V9.077H5.692V6.667h9.692v2.41H11.74v13.67h.411z" />
+                </svg>
+            );
+        case "Node.js":
+            return (
+                <svg className={`${className} fill-none stroke-current`} viewBox="0 0 24 24" strokeWidth="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+            );
+        case "Tailwind CSS":
+            return (
+                <svg className={`${className} fill-current`} viewBox="0 0 24 24">
+                    <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C7.666 17.818 9.027 19 12.001 19c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" />
+                </svg>
+            );
+        case "Framer Motion":
+            return (
+                <svg className={`${className} fill-current`} viewBox="0 0 24 24">
+                    <path d="M12 0L24 12H12l12 12H0L12 12H0z" />
+                </svg>
+            );
+        case "PostgreSQL":
+            return (
+                <svg className={`${className} fill-none stroke-current`} viewBox="0 0 24 24" strokeWidth="2">
+                    <ellipse cx="12" cy="5" rx="9" ry="3" />
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                    <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
+                </svg>
+            );
+        case "Redis":
+            return (
+                <svg className={`${className} fill-none stroke-current`} viewBox="0 0 24 24" strokeWidth="2">
+                    <polygon points="12,2 22,8 12,14 2,8" />
+                    <polygon points="12,10 22,16 12,22 2,16" />
+                </svg>
+            );
+        case "Bun":
+            return (
+                <svg className={`${className} fill-none stroke-current`} viewBox="0 0 24 24" strokeWidth="2">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M8 12c.5 1.5 2 2.5 4 2.5s3.5-1 4-2.5" />
+                </svg>
+            );
+        case "Docker":
+            return (
+                <svg className={`${className} fill-current`} viewBox="0 0 24 24">
+                    <path d="M13.962 8.224h-2.43c-.171 0-.312.14-.312.312v2.43c0 .171.141.312.312.312h2.43c.172 0 .312-.141.312-.312V8.536c0-.171-.14-.312-.312-.312zm-3.41 0H8.121c-.171 0-.312.14-.312.312v2.43c0 .171.14.312.312.312h2.43c.172 0 .312-.141.312-.312V8.536c0-.171-.14-.312-.312-.312zm-3.41 0H4.712c-.171 0-.312.14-.312.312v2.43c0 .171.14.312.312.312h2.43c.171 0 .312-.141.312-.312V8.536c0-.171-.14-.312-.312-.312zm9.13 5.122H2.43c-.171 0-.312.14-.312.312v2.43c0 .171.14.312.312.312h13.84c.172 0 .312-.141.312-.312v-2.43c0-.171-.14-.312-.312-.312z" />
+                </svg>
+            );
+        case "Github":
+            return (
+                <svg className={`${className} fill-current`} viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+            );
+        case "Gitlab":
+            return (
+                <svg className={`${className} fill-current`} viewBox="0 0 24 24">
+                    <path d="M23.953 11.07a.64.64 0 00-.22-.47L12 2 1.27 10.6a.64.64 0 00-.22.47c0 .28.16.53.4.65L12 17.5l10.55-5.78a.72.72 0 00.4-.65z" />
+                </svg>
+            );
+        case "Figma":
+            return (
+                <svg className={`${className} fill-current`} viewBox="0 0 24 24">
+                    <path d="M12 12a4 4 0 0 0-4-4H4v4a4 4 0 0 0 4 4h4zM12 12a4 4 0 0 0 4-4H12zM12 12v8a4 4 0 0 0 4-4v-4zM8 4a4 4 0 0 0-4 4h4zM16 4a4 4 0 0 0-4 4h4z" />
+                </svg>
+            );
+        case "GraphQL":
+            return (
+                <svg className={`${className} fill-none stroke-current`} viewBox="0 0 24 24" strokeWidth="2">
+                    <polygon points="12,2 22,8 22,16 12,22 2,16 2,8" />
+                    <polygon points="12,7 17,10 17,14 12,17 7,14 7,10" />
+                </svg>
+            );
+        case "Supabase":
+            return (
+                <svg className={`${className} fill-current`} viewBox="0 0 24 24">
+                    <path d="M13.9 2L5 12h7l-1.9 10L19 12h-7z" />
+                </svg>
+            );
+        case "shadcn":
+            return (
+                <svg className={`${className} fill-none stroke-current`} viewBox="0 0 24 24" strokeWidth="2">
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                    <path d="M9 9h6v6H9z" />
+                </svg>
+            );
+        case "Jest":
+            return (
+                <svg className={`${className} fill-none stroke-current`} viewBox="0 0 24 24" strokeWidth="2">
+                    <path d="M12 2l9 4.9v10.2L12 22l-9-4.9V6.9z" />
+                    <circle cx="12" cy="12" r="3" />
+                </svg>
+            );
+        default:
+            return (
+                <svg className={`${className} fill-none stroke-current`} viewBox="0 0 24 24" strokeWidth="2">
+                    <path d="M16 18l6-6-6-6M8 6L2 12l6 6" />
+                </svg>
+            );
+    }
+};
 
 
 

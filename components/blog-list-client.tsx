@@ -76,7 +76,7 @@ export default function BlogListClient({ posts }: { posts: BlogPost[] }) {
                                     >
                                         <div className="flex flex-col md:flex-row border border-border rounded-2xl overflow-hidden bg-muted/5 hover:bg-muted/10 transition-all hover:border-primary/50">
                                             {/* Image Container */}
-                                            <div className="w-full md:w-[40%] aspect-[16/10] md:aspect-[16/10] relative overflow-hidden shrink-0">
+                                            <div className="w-full md:w-[40%] aspect-[16/10] md:aspect-auto relative overflow-hidden shrink-0">
                                                 <Image
                                                     src={post.image}
                                                     alt={post.title}
@@ -96,7 +96,7 @@ export default function BlogListClient({ posts }: { posts: BlogPost[] }) {
                                                         </span>
                                                     </div>
 
-                                                    <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-foreground group-hover:text-primary transition-colors mb-4">
+                                                    <h2 className="text-lg md:text-xl font-medium tracking-tight text-foreground group-hover:text-primary transition-colors mb-4">
                                                         {post.title}
                                                     </h2>
 
