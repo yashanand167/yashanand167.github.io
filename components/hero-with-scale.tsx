@@ -177,7 +177,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                         </section>
 
                         <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal">
-                            <div className="absolute inset-0 bg-gradient-to-b from-background to-transparent pointer-events-none" />
+                            <div className="absolute inset-0 bg-gradient-to-b from-background to-background/0 pointer-events-none" />
                         </section>
 
                         <section className="relative w-full border-b border-border">
@@ -423,7 +423,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                                 sizes="(max-width: 768px) 100vw, 50vw"
                                                 className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
                                             />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-background/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                         </div>
 
                                         {/* Content */}
@@ -466,7 +466,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                                 sizes="(max-width: 768px) 100vw, 50vw"
                                                 className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
                                             />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-background/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                         </div>
 
                                         {/* Content */}
@@ -504,7 +504,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
 
                                     <div className="relative z-10 flex flex-col md:flex-row">
                                         {/* Image */}
-                                        <div className="md:w-[40%] relative bg-gradient-to-br from-primary/5 to-transparent overflow-hidden aspect-video md:aspect-auto min-h-[200px]">
+                                         <div className="md:w-[40%] relative bg-gradient-to-br from-primary/5 to-primary/0 overflow-hidden aspect-video md:aspect-auto min-h-[200px]">
                                             <Image
                                                 src="/Landing Page.png"
                                                 alt="Inertia UI Preview"
@@ -513,7 +513,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                                                 sizes="(max-width: 768px) 100vw, 40vw"
                                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                                             />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                             <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-background/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                         </div>
 
                                         {/* Content */}
@@ -790,7 +790,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
 
 
                         <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal">
-                            <div className="absolute inset-0 bg-gradient-to-b from-background to-transparent pointer-events-none" />
+                            <div className="absolute inset-0 bg-gradient-to-b from-background to-background/0 pointer-events-none" />
                         </section>
 
                         <section className="relative w-full">

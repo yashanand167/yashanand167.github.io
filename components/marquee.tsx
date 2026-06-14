@@ -23,8 +23,8 @@ export function Marquee({
   return (
     <div className={cn("relative flex w-full overflow-hidden py-4", className)}>
       {/* Gradient Overlays for smooth edges */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-background/0" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-background/0" />
 
       <motion.div
         initial={{ x: direction === "left" ? 0 : "-50%" }}

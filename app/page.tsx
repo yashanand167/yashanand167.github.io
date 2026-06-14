@@ -15,7 +15,7 @@ export default function Home() {
       </div> */}
       <footer className="w-full relative h-48 md:h-80 flex items-center justify-center border-t border-border overflow-hidden bg-background group">
                 <div className="absolute inset-0 bg-dot opacity-[0.5] pointer-events-none" />
-                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none z-0" />
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-background/0 pointer-events-none z-0" />
                 
                 <h2 
                     className="relative z-10 text-[7vw] md:text-[7vw] lg:text-[6vw] font-bold tracking-tighter whitespace-nowrap opacity-20 group-hover:opacity-100 transition-all duration-1000 uppercase text-foreground [-webkit-text-fill-color:transparent] [-webkit-text-stroke:1px_currentColor] md:[-webkit-text-stroke:2px_currentColor] cursor-default select-none group-hover:scale-105"
