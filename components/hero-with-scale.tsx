@@ -176,9 +176,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                             </div>
                         </section>
 
-                        <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal">
-                            <div className="absolute inset-0 bg-gradient-to-b from-background to-background/0 pointer-events-none" />
-                        </section>
+                        <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal" />
 
                         <section className="relative w-full border-b border-border">
                             <div className="p-4 md:p-8">
@@ -789,9 +787,7 @@ export default function HeroWithScale({ contributions }: { contributions?: Promi
                         </section>
 
 
-                        <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal">
-                            <div className="absolute inset-0 bg-gradient-to-b from-background to-background/0 pointer-events-none" />
-                        </section>
+                        <section className="relative w-full h-12 md:h-16 bg-stripe-horizontal" />
 
                         <section className="relative w-full">
                             <div className="p-4 md:p-8">
