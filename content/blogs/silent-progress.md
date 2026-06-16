@@ -34,7 +34,7 @@ They see the current version and assume they know the entire story.
 
 I have experienced this pattern many times in my own life.
 
-Whenever I achieved something — whether it was **winning trophies**, **earning recognition**, or **securing a scholarship** — there were always people who reduced it to a simple statement:
+Whenever I achieved something whether it was **winning trophies**, **earning recognition**, or **securing a scholarship**, there were always people who reduced it to a simple statement:
 
 > **"Anyone can do that."**
 
