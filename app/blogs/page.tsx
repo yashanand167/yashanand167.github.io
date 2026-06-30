@@ -15,9 +15,9 @@ export default function BlogsPage() {
                 <main className="flex-1 min-w-0">
                     <div className="p-4 md:px-8 md:py-6">
                         <p className="text-sm text-neutral-500">
-                            My Work Process
+                            Blogs & Thoughts
                         </p>
-                        <p className="mt-2 text-lg md:text-lg">Explore product design, development and intersection of both</p>
+                        <p className="mt-2 text-lg md:text-lg">Reflections on design, technology, and personal stories.</p>
                     </div>
 
                     <BlogListClient posts={posts} />

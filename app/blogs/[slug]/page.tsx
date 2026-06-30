@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ThemeToggle from "@/components/theme-toggle";
+import Signature from "@/components/ui/Signature";
 
 export async function generateStaticParams() {
     const posts = getAllPosts();
@@ -56,6 +57,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                                     className="blog-content text-muted-foreground leading-relaxed md:text-lg space-y-6"
                                     dangerouslySetInnerHTML={{ __html: post.contentHtml || "" }}
                                 />
+
+                                {/* Personal Category Signature */}
+                                {post.category?.toLowerCase() === "personal" && (
+                                    <div className="mt-16 pt-8 border-t border-border/60 flex flex-col items-start gap-2">
+                                        <p className="text-sm font-medium text-muted-foreground/80 italic font-serif">
+                                            Written by Yash Anand
+                                        </p>
+                                        <Signature className="w-28 md:w-36 h-auto text-foreground/80 -ml-4" />
+                                    </div>
+                                )}
                             </article>
                         </main>
 

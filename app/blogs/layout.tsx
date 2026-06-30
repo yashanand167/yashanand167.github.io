@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blogs | Yash Anand",
-  description: "Explore product design, development and the intersection of both.",
+  title: "Blogs & Thoughts | Yash Anand",
+  description: "Reflections on design, technology, and personal stories.",
 };
 
 export default function BlogsLayout({
